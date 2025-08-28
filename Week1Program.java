@@ -41,8 +41,8 @@ public class Week1Program {
      */
     int radiocarbonDate ( double p ) {
         // Fill in the required expressions
-        int currentYear = Calendar.?
-        int artifactYear = currentYear - ?
+        int currentYear = Calendar.getInstance( ).getWeekYear( );
+        int artifactYear = currentYear - radiocarbonAge( p );
         return artifactYear;
     }
 
