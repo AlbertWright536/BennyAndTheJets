@@ -13,13 +13,13 @@ public class Week1Program {
 	 * @return the percent of C14 remaining in the artifact
 	 */
 	double radiocarbonPercent ( int age ) {
-		//Fill in the required expressions
+		Fill in the required expressions
 		double percentOfCarbonRemaining = ?
 		return percentOfCarbonRemaining;
 		}
 		/**
 		* Given the percentage of C14 remaining in an artifact, return the age of the
-		* artifact in years.
+		artifact in years.
 		* Here a percentage is a double in the range [0.0, 1.0].
 		* Your result should be truncated, not rounded.
 		* @param p - the percentage of C14 remaining in an artifact
