@@ -15,7 +15,7 @@ public class Week1Program {
      */
     double radiocarbonPercent ( int age ) {
         // Fill in the required expressions
-        double percentOfCarbonRemaining =Math.pow(Math.E,(age *(-0.693))/5730);
+        double percentOfCarbonRemaining = Math.pow( Math.E , ( age * ( -0.693 ) ) / 5730 );
         return percentOfCarbonRemaining;
     }
 
@@ -28,7 +28,7 @@ public class Week1Program {
      */
     int radiocarbonAge ( double p ) {
         // Fill in the required expressions
-        double ageOfArtifact = (Math.log(p)/-0.693)*5730.0;
+        double ageOfArtifact = ( Math.log(p) / -0.693 ) * 5730.0;
         return (int) ageOfArtifact;
     }
 
@@ -54,7 +54,7 @@ public class Week1Program {
         int age = 1845;
         double percentage = self.radiocarbonPercent( age );
         System.out.printf( "radiocarbonPercent( %d ) = %f%%. ", age, percentage );
-        if ( (int) (percentage * 100) == 80 ) {
+        if ( (int) ( percentage * 100 ) == 80 ) {
             System.out.println( "Success!\n" );
         } else {
             System.out.println( "FAILED!\n" );
