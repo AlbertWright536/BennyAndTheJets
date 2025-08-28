@@ -15,7 +15,7 @@ public class Week1Program {
      */
     double radiocarbonPercent ( int age ) {
         // Fill in the required expressions
-        double percentOfCarbonRemaining = ?
+        double percentOfCarbonRemaining =Math.pow(Math.E,(age *(-0.693))/5730);
         return percentOfCarbonRemaining;
     }
 

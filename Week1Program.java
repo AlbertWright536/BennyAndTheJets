@@ -28,7 +28,7 @@ public class Week1Program {
      */
     int radiocarbonAge ( double p ) {
         // Fill in the required expressions
-        double ageOfArtifact = ?
+        double ageOfArtifact = (Math.log(p)/-0.693)*5730.0;
         return (int) ageOfArtifact;
     }
 
