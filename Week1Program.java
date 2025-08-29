@@ -3,7 +3,7 @@ import java.util.Calendar;
 /**
  * Week1Program: Solves problems in RadioCarbon Dating
  *
- * @author Bennie And The Jets
+ * @author Bennie And The Jets, Marcus, Michelle, Freya, Albert
  */
 public class Week1Program {
 
