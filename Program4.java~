@@ -8,5 +8,4 @@ import java.util.scanner;
  * * @author Marcus B, Michelle B, Freya D, Albert W
  */
 
-public String translateEnglish2Pirate(String englishSentence) {
-	
+public String translateEnglish2Pirate(String englishSentence);
