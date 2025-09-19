@@ -17,18 +17,25 @@ public class Program4 {
 		if ( englishSentence.trim().isEmpty()) {
 			return "Blimey!";
 		}
+
 		Scanner scanner = new Scanner(englishSentence);
-			String translated = "";
-			while (scanner.hasNext()) {
-				String word = scanner.next();
-				for (int i = 0; i < dictionary.length; i++) {
-					if (word.contains(dictionary[i][0])) {
-						word = word.replace(dictionary[i][0], dictionary[i][1]);
+		String translated = "";
+		while (scanner.hasNext()) {
+			String word = scanner.next();
+			word = word.replaceAll("[^\\sa-zA-z0-9]", "");
+			for (int i = 0; i < dictionary[0].length; i++) {
+				if (word.trim().toLowerCase().equals(dictionary[0][i])) {
+					boolean capitalize = false;
+					if (Character.isUpperCase(word.charAt(0))) {
+						capitalize = true;
 					}
+					word = dictionary[1][i];
+					word = formatWord(word, capitalize);
 				}
-				translated = translated + word + " ";
 			}
-			return translated;
+			translated = translated + word + " ";
+		}
+		return translated;
 		
 	}
 	private String formatWord(String word, boolean capitalize) {
@@ -37,7 +44,10 @@ public class Program4 {
 	}
 	public static void main(String [] args){
 		Program4 program = new Program4();
-		System.out.println(program.translateEnglish2Pirate("Hello, how are you?"));
+		Scanner input = new Scanner(System.in);
+		while (true) {
+			System.out.println(program.translateEnglish2Pirate(input.nextLine()));
+		}
 	}	
 }
 
