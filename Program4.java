@@ -22,17 +22,21 @@ public class Program4 {
 		String translated = "";
 		while (scanner.hasNext()) {
 			String word = scanner.next();
-			word = word.replaceAll("[^\\sa-zA-z0-9]", "");
+			// Copy of the word without any punctuation
+			String noPunctuationWord = word.replaceAll("[^\\sa-zA-z0-9]", "");
+
 			for (int i = 0; i < dictionary[0].length; i++) {
-				if (word.trim().toLowerCase().equals(dictionary[0][i])) {
+				// Check if the word is in the dictionary
+				if (noPunctuationWord.trim().toLowerCase().equals(dictionary[0][i])) {
 					boolean capitalize = false;
 					if (Character.isUpperCase(word.charAt(0))) {
 						capitalize = true;
 					}
-					word = dictionary[1][i];
+					word = word.toLowerCase().replace(dictionary[0][i], dictionary[1][i]);
 					word = formatWord(word, capitalize);
 				}
 			}
+			// Append translated word to the sentence to be returned
 			translated = translated + word + " ";
 		}
 		return translated;
@@ -44,6 +48,7 @@ public class Program4 {
 	}
 	public static void main(String [] args){
 		Program4 program = new Program4();
+		// Initialize a scanner to take standard input
 		Scanner input = new Scanner(System.in);
 		while (true) {
 			System.out.println(program.translateEnglish2Pirate(input.nextLine()));
