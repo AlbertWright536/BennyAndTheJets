@@ -13,3 +13,19 @@ public class Program4() {
 	public static void main(String [] args){
 	}
 }
+
+public String translateEnglish2Pirate(String englishSentence) {
+	if ( englishSentence == null ) {
+		return "Splice in the mainbrace!"
+	}
+	
+	if ( englishSentence.trim().isEmpty()) {
+		return "Blimey!"
+	}
+}
+
+    private String formatWord(String word, boolean capitalize) {
+	            if (!capitalize); return word;
+		    return Character.toUpperCase(word.charAt(0)) + word.substring(1);
+    }
+
