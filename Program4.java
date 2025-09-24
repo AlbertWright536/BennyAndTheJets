@@ -42,7 +42,7 @@ public class Program4 {
 				// V rule
 			noVWord = word.replaceAll("[v]", "'");
 			// ing rule
-			noINGWord = noVWord.replaceAll("[ing]", "in");
+			noINGWord = noVWord.replaceAll("ing", "in");
 
 			}
 			// Append translated word to the sentence to be returned
