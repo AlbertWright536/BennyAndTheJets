@@ -112,6 +112,7 @@ public class BrowserProgram extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		// Build your window here
+		BorderPane borderPane = new BorderPane();
 		primaryStage.show();
 	}
 

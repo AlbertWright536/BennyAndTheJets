@@ -111,7 +111,8 @@ public class BrowserProgram extends Application {
 	 */
 	@Override
 	public void start(Stage primaryStage) {
-		// Build your window here.
+		// Build your window here
+		primaryStage.show();
 	}
 
 	/**
