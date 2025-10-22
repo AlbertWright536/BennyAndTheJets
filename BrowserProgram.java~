@@ -1,3 +1,9 @@
+//Benny And The Jets
+//Michelle Boscato
+//Marcus Bonifas
+//Freya Durst
+//Albert Wright
+//
 // IMPORTS
 // These are some classes that may be useful for completing the project.
 // You may have to add others.
@@ -46,7 +52,7 @@ public class BrowserProgram extends Application {
 	// These variables are included to get you started.
 	private Stage stage = null;
 	private BorderPane borderPane = null;
-    private WebView view = null;
+	private WebView view = null;
 	private WebEngine webEngine = null;
 	private TextField statusbar = null;
 

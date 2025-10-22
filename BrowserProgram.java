@@ -1,3 +1,9 @@
+//Benny And The Jets
+//Michelle Boscato
+//Marcus Bonifas
+//Freya Durst
+//Albert Wright
+//
 // IMPORTS
 // These are some classes that may be useful for completing the project.
 // You may have to add others.
@@ -105,7 +111,8 @@ public class BrowserProgram extends Application {
 	 */
 	@Override
 	public void start(Stage primaryStage) {
-		// Build your window here.
+		// Build your window here
+		primaryStage.show();
 	}
 
 	/**
