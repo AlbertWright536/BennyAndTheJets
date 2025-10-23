@@ -57,7 +57,7 @@ public class BrowserProgram extends Application {
 	private WebEngine webEngine = null;
 	private TextField statusbar = null;
 	private TextField addressBox = null;
-	private String titleBar;
+	private String webPage;
 
 	// HELPER METHODS
 	/**
@@ -82,6 +82,7 @@ public class BrowserProgram extends Application {
 	private WebView makeHtmlView( ) {
 		view = new WebView();
 		webEngine = view.getEngine();
+		webEngine.load("https://migigan.tech");
 		return view;
 	}
 
@@ -100,18 +101,18 @@ public class BrowserProgram extends Application {
 		statusbarPane.getChildren().addAll(statusbar);
 		return statusbarPane;
 	}
-	private void setTitle (String title) {
-		titleBar = title;
+	private void setWebPage (String page) {
+		webPage = page;
 	}
-	public String getTitle () {
-		return titleBar;
+	public String getWebPage () {
+		return webPage;
 	}
 
 	//Make ToolBar, including back and forward buttons, address box, and help button
 	public HBox makeToolBar() {
 		HBox toolbar = new HBox();
 		toolbar.setSpacing( 10 );
-		//toolbar.setFillColor(Color.BLACK);
+		//toolbar.setFill(Color.BLACK);
 		//toolbar.setHgrow
 		Button backArrow = new Button("<");
 		Button forwardArrow = new Button(">");
@@ -138,12 +139,13 @@ public class BrowserProgram extends Application {
 
 		primaryStage.setTitle("CS1131 Web Browser");
 		Group mainGroup = new Group();
-		Scene mainScene = new Scene(mainGroup, 700, 500, Color.BLUE);
+		Scene mainScene = new Scene(mainGroup);
 		BorderPane borderPane = new BorderPane();
 		HBox statusbarPane = makeStatusBar();
 		HBox makeToolBar = makeToolBar();
 		WebView webView = makeHtmlView();
-		mainGroup.getChildren().addAll(borderPane, statusbarPane, makeToolBar);
+		mainGroup.getChildren().addAll(borderPane, statusbarPane, makeToolBar, webView);
+		primaryStage.setScene(mainScene);
 		primaryStage.show();
 	}
 	/**
