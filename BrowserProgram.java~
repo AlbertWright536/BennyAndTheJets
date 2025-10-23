@@ -42,6 +42,7 @@ import javafx.concurrent.Worker.State;
 import javafx.concurrent.Worker;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
+import javafx.scene.paint.Color;
 
 /**
  * The main class for BrowserProgram. BrowserProgram constructs the JavaFX window and
@@ -55,6 +56,8 @@ public class BrowserProgram extends Application {
 	private WebView view = null;
 	private WebEngine webEngine = null;
 	private TextField statusbar = null;
+	private TextField addressBox = null;
+	private String titleBar;
 
 	// HELPER METHODS
 	/**
@@ -97,6 +100,26 @@ public class BrowserProgram extends Application {
 		statusbarPane.getChildren().addAll(statusbar);
 		return statusbarPane;
 	}
+	private void setTitle (String title) {
+		titleBar = title;
+	}
+	public String getTitle () {
+		return titleBar;
+	}
+
+	//Make ToolBar, including back and forward buttons, address box, and help button
+	public HBox makeToolBar() {
+		HBox toolbar = new HBox();
+		toolbar.setSpacing( 10 );
+		//toolbar.setFillColor(Color.BLACK);
+		//toolbar.setHgrow
+		Button backArrow = new Button("<");
+		Button forwardArrow = new Button(">");
+		TextField addressBar = new TextField( );
+		Button help = new Button("?");
+		toolbar.getChildren().addAll(backArrow, forwardArrow, addressBar, help);
+		return toolbar;
+	}
 
 	// REQUIRED METHODS
 	/**
@@ -112,9 +135,17 @@ public class BrowserProgram extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		// Build your window here
+
+		primaryStage.setTitle("CS1131 Web Browser");
+		Group mainGroup = new Group();
+		Scene mainScene = new Scene(mainGroup, 700, 500, Color.WHITE);
+		BorderPane borderPane = new BorderPane();
+		HBox statusbarPane = makeStatusBar();
+		HBox makeToolBar = makeToolBar();
+		WebView webView = makeHtmlView();
+		mainGroup.getChildren().addAll(borderPane, statusbarPane, makeToolBar);
 		primaryStage.show();
 	}
-
 	/**
 	 * The main( ) method is ignored in JavaFX applications.
 	 * main( ) serves only as fallback in case the application is launched
