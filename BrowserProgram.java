@@ -60,7 +60,8 @@ public class BrowserProgram extends Application {
 	private String webPage = "https://google.com";
 	//alternative starting address is https://migigan.tech
 	ArrayList<String> searchHistory = null;
-	private int historyIndex = -1; // -1 indicates the present
+	private int historyIndex = 0;
+    private boolean timeTraveling = false;
 
 	// HELPER METHODS
 	/**
@@ -85,6 +86,23 @@ public class BrowserProgram extends Application {
 	private WebView makeHtmlView( ) {
 		view = new WebView();
 		webEngine = view.getEngine();
+
+        webEngine.getLoadWorker().stateProperty().addListener(
+                new ChangeListener<State>() {
+                    public void changed(ObservableValue ov, State oldState, State newState) {
+                        if (newState == State.SUCCEEDED) {
+                            addressBox.setText(webEngine.getLocation());
+                            //if (!timeTraveling && historyIndex < searchHistory.size() - 1) {
+                            //    
+                            //}
+                            timeTraveling = false;
+                            searchHistory.add(webEngine.getLocation());
+                            historyIndex++;
+                            stage.setTitle(webEngine.getTitle());
+                        }
+                    }
+                });
+        webEngine.setOnStatusChanged(e -> statusbar.setText( e.getData()));
 		webEngine.load(webPage);
 		return view;
 	}
@@ -119,16 +137,16 @@ public class BrowserProgram extends Application {
 		//toolbar.setFill(Color.BLACK);
 		Button backArrow = new Button("<");
 		backArrow.setOnAction(e -> {
-			if(historyIndex == -1) {
-				historyIndex = searchHistory.size() - 1;
-			} else if (historyIndex > 0) {
+			if (historyIndex > 0) {
 				historyIndex--;
+                webEngine.load(searchHistory.get(historyIndex));
 			}
 		});
 		Button forwardArrow = new Button(">");
 		forwardArrow.setOnAction(e -> {
-			if(historyIndex != -1 && historyIndex < searchHistory.size() - 1) {
+			if(historyIndex < searchHistory.size() - 1) {
 				historyIndex++;
+                webEngine.load(searchHistory.get(historyIndex));
 			}
 		});
 		TextField addressBar = new TextField();
@@ -137,6 +155,7 @@ public class BrowserProgram extends Application {
 				webEngine.load(addressBar.getText());
 			}
 		});
+        addressBox = addressBar;
 
 		Button help = new Button("?");
 		help.setOnAction(e -> {
@@ -164,6 +183,7 @@ public class BrowserProgram extends Application {
 	public void start(Stage primaryStage) {
 		// Build your window here
 		searchHistory = new ArrayList<String>();
+        stage = primaryStage;
 
 		primaryStage.setTitle(webPage);
 		Group mainGroup = new Group();
@@ -180,7 +200,7 @@ public class BrowserProgram extends Application {
 		
 			
 
-		primaryStage.show();
+		stage.show();
 	}
 	/**
 	 * The main( ) method is ignored in JavaFX applications.
