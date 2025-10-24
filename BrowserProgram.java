@@ -60,9 +60,8 @@ public class BrowserProgram extends Application {
 	private TextField addressBox = null;
 	private String webPage = "https://google.com";
 	//alternative starting address is https://migigan.tech
-	ArrayList<String> searchHistory = null;
 	private int historyIndex = 0;
-   	private boolean timeTraveling = false;
+    private WebHistory history = null;
 
 
 	// HELPER METHODS
@@ -88,17 +87,12 @@ public class BrowserProgram extends Application {
 	private WebView makeHtmlView( ) {
 		view = new WebView();
 		webEngine = view.getEngine();
+        history = webEngine.getHistory();
         	webEngine.getLoadWorker().stateProperty().addListener(
                 new ChangeListener<State>() {
                     public void changed(ObservableValue ov, State oldState, State newState) {
                         if (newState == State.SUCCEEDED) {
                             addressBox.setText(webEngine.getLocation());
-                            //if (!timeTraveling && historyIndex < searchHistory.size() - 1) {
-                            //    
-                            //}
-                            timeTraveling = false;
-                            searchHistory.add(webEngine.getLocation());
-                            historyIndex++;
                             stage.setTitle(webEngine.getTitle());
                         }
                     }
@@ -126,8 +120,6 @@ public class BrowserProgram extends Application {
 	}
 	private void setWebPage (String page) {
 		webPage = page;
-		searchHistory.add(page);
-
 	}
 	public String getWebPage () {
 		return webPage;
@@ -139,17 +131,11 @@ public class BrowserProgram extends Application {
 		toolbar.setStyle("-fx-background-color: #000000;");
 		Button backArrow = new Button("<");
 		backArrow.setOnAction(e -> {
-			if (historyIndex > 0) {
-				historyIndex--;
-                webEngine.load(searchHistory.get(historyIndex));
-			}
+            history.go(-1);
 		});
 		Button forwardArrow = new Button(">");
 		forwardArrow.setOnAction(e -> {
-			if(historyIndex < searchHistory.size() - 1) {
-				historyIndex++;
-                webEngine.load(searchHistory.get(historyIndex));
-			}
+            history.go(1);
 		});
 		TextField addressBar = new TextField();
 		addressBar.setOnAction(new EventHandler<ActionEvent>() {
@@ -184,8 +170,7 @@ public class BrowserProgram extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		// Build your window here
-		searchHistory = new ArrayList<String>();
-        	stage = primaryStage;
+        stage = primaryStage;
 		primaryStage.setTitle(webPage);	
 		BorderPane borderPane = new BorderPane();
 		HBox statusbarPane = makeStatusBar();
