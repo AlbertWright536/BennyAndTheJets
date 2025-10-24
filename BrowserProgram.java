@@ -58,6 +58,8 @@ public class BrowserProgram extends Application {
 	private TextField statusbar = null;
 	private TextField addressBox = null;
 	private String webPage = "https://migigan.tech";
+	ArrayList<String> searchHistory = null;
+	private int historyIndex = -1; // -1 indicates the present
 
 	// HELPER METHODS
 	/**
@@ -103,6 +105,8 @@ public class BrowserProgram extends Application {
 	}
 	private void setWebPage (String page) {
 		webPage = page;
+		searchHistory.add(page);
+
 	}
 	public String getWebPage () {
 		return webPage;
@@ -113,7 +117,19 @@ public class BrowserProgram extends Application {
 		HBox toolbar = new HBox(10);
 		//toolbar.setFill(Color.BLACK);
 		Button backArrow = new Button("<");
+		backArrow.setOnAction(e -> {
+			if(historyIndex == -1) {
+				historyIndex = searchHistory.size() - 1;
+			} else if (historyIndex > 0) {
+				historyIndex--;
+			}
+		});
 		Button forwardArrow = new Button(">");
+		forwardArrow.setOnAction(e -> {
+			if(historyIndex != -1 && historyIndex < searchHistory.size() - 1) {
+				historyIndex++;
+			}
+		});
 		TextField addressBar = new TextField("");
 		Button help = new Button("?");
 		toolbar.setHgrow(addressBar, Priority.ALWAYS);
@@ -135,7 +151,7 @@ public class BrowserProgram extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		// Build your window here
-		
+		searchHistory = new ArrayList<String>();
 
 		primaryStage.setTitle(webPage);
 		Group mainGroup = new Group();
@@ -145,12 +161,13 @@ public class BrowserProgram extends Application {
 		HBox makeToolBar = makeToolBar();
 		WebView webView = makeHtmlView();
 		borderPane.setTop(makeToolBar);
+		borderPane.setCenter(webView);
 		borderPane.setBottom(statusbarPane);
-		mainGroup.getChildren().addAll(borderPane, statusbarPane, makeToolBar, webView);
+		mainGroup.getChildren().addAll(borderPane);
 		primaryStage.setScene(mainScene);
 		
-		webPage = makeToolBar.addressBar;
-		
+			
+
 		primaryStage.show();
 	}
 	/**
