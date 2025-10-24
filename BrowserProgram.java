@@ -43,6 +43,7 @@ import javafx.concurrent.Worker;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.scene.paint.Color;
+import javafx.scene.layout.GridPane;
 
 /**
  * The main class for BrowserProgram. BrowserProgram constructs the JavaFX window and
@@ -61,7 +62,8 @@ public class BrowserProgram extends Application {
 	//alternative starting address is https://migigan.tech
 	ArrayList<String> searchHistory = null;
 	private int historyIndex = 0;
-    private boolean timeTraveling = false;
+   	private boolean timeTraveling = false;
+
 
 	// HELPER METHODS
 	/**
@@ -86,8 +88,7 @@ public class BrowserProgram extends Application {
 	private WebView makeHtmlView( ) {
 		view = new WebView();
 		webEngine = view.getEngine();
-
-        webEngine.getLoadWorker().stateProperty().addListener(
+        	webEngine.getLoadWorker().stateProperty().addListener(
                 new ChangeListener<State>() {
                     public void changed(ObservableValue ov, State oldState, State newState) {
                         if (newState == State.SUCCEEDED) {
@@ -102,7 +103,8 @@ public class BrowserProgram extends Application {
                         }
                     }
                 });
-        webEngine.setOnStatusChanged(e -> statusbar.setText( e.getData()));
+        	webEngine.setOnStatusChanged(e -> statusbar.setText( e.getData()));
+		
 		webEngine.load(webPage);
 		return view;
 	}
@@ -117,9 +119,9 @@ public class BrowserProgram extends Application {
 		statusbarPane.setPadding(new Insets(5, 4, 5, 4));
 		statusbarPane.setSpacing(10);
 		statusbarPane.setStyle("-fx-background-color: #336699;");
-		statusbar = new TextField();
-		HBox.setHgrow(statusbar, Priority.ALWAYS);
+		statusbar = new TextField( );
 		statusbarPane.getChildren().addAll(statusbar);
+		HBox.setHgrow(statusbar, Priority.ALWAYS);	
 		return statusbarPane;
 	}
 	private void setWebPage (String page) {
@@ -134,7 +136,7 @@ public class BrowserProgram extends Application {
 	//Make ToolBar, including back and forward buttons, address box, and help button
 	public HBox makeToolBar() {
 		HBox toolbar = new HBox(10);
-		//toolbar.setFill(Color.BLACK);
+		toolbar.setStyle("-fx-background-color: #000000;");
 		Button backArrow = new Button("<");
 		backArrow.setOnAction(e -> {
 			if (historyIndex > 0) {
@@ -155,16 +157,16 @@ public class BrowserProgram extends Application {
 				webEngine.load(addressBar.getText());
 			}
 		});
-        addressBox = addressBar;
-
+        	addressBox = addressBar;
 		Button help = new Button("?");
 		help.setOnAction(e -> {
 			webEngine.loadContent("<html><body<h1>WebBrowser</H1><br/></body></html>You are using the web browser application developed by BennyAndTheJets, a team of students at Michigan Technological University. This was developed as part of the class CS1131 Accelerated Intro to Programming, Lab session L03. To use this program type a web address in the search bar at the top. If the address that you typed was invalid you will be routed to this screen. If you were routed here then it is likely that you made an error when typing the URL. Make sure that you remember to include https:// at the start of your URL, and .com at the end. If you are unable to remember the URL consider navigating to https://google.com to find the sight that way");
 		
 			}
 		);
-		toolbar.setHgrow(addressBar, Priority.ALWAYS);
 		toolbar.getChildren().addAll(backArrow, forwardArrow, addressBar, help);
+	
+		HBox.setHgrow(addressBar, Priority.ALWAYS);
 		return toolbar;
 	}
 
@@ -183,11 +185,8 @@ public class BrowserProgram extends Application {
 	public void start(Stage primaryStage) {
 		// Build your window here
 		searchHistory = new ArrayList<String>();
-        stage = primaryStage;
-
-		primaryStage.setTitle(webPage);
-		Group mainGroup = new Group();
-		Scene mainScene = new Scene(mainGroup);
+        	stage = primaryStage;
+		primaryStage.setTitle(webPage);	
 		BorderPane borderPane = new BorderPane();
 		HBox statusbarPane = makeStatusBar();
 		HBox makeToolBar = makeToolBar();
@@ -195,8 +194,10 @@ public class BrowserProgram extends Application {
 		borderPane.setTop(makeToolBar);
 		borderPane.setCenter(webView);
 		borderPane.setBottom(statusbarPane);
-		mainGroup.getChildren().addAll(borderPane);
+		Scene mainScene = new Scene(borderPane);
+	
 		primaryStage.setScene(mainScene);
+		//mainScene.sizeToStage();
 		
 			
 
