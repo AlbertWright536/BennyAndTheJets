@@ -57,7 +57,8 @@ public class BrowserProgram extends Application {
 	private WebEngine webEngine = null;
 	private TextField statusbar = null;
 	private TextField addressBox = null;
-	private String webPage = "https://migigan.tech";
+	private String webPage = "https://google.com";
+	//alternative starting address is https://migigan.tech
 	ArrayList<String> searchHistory = null;
 	private int historyIndex = -1; // -1 indicates the present
 
@@ -130,7 +131,13 @@ public class BrowserProgram extends Application {
 				historyIndex++;
 			}
 		});
-		TextField addressBar = new TextField("");
+		TextField addressBar = new TextField();
+		addressBar.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle ( ActionEvent e ) {
+				webEngine.load(addressBar.getText());
+			}
+		});
+
 		Button help = new Button("?");
 		toolbar.setHgrow(addressBar, Priority.ALWAYS);
 		toolbar.getChildren().addAll(backArrow, forwardArrow, addressBar, help);

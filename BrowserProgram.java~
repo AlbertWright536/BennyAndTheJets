@@ -84,7 +84,7 @@ public class BrowserProgram extends Application {
 	private WebView makeHtmlView( ) {
 		view = new WebView();
 		webEngine = view.getEngine();
-		webEngine.load(webPage);
+		//webEngine.load(webPage);
 		return view;
 	}
 
@@ -130,7 +130,13 @@ public class BrowserProgram extends Application {
 				historyIndex++;
 			}
 		});
-		TextField addressBar = new TextField("");
+		TextField addressBar = new TextField();
+		addressBar.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle ( ActionEvent e ) {
+				webEngine.load(addressBar.getText());
+			}
+		});
+
 		Button help = new Button("?");
 		toolbar.setHgrow(addressBar, Priority.ALWAYS);
 		toolbar.getChildren().addAll(backArrow, forwardArrow, addressBar, help);
@@ -161,8 +167,9 @@ public class BrowserProgram extends Application {
 		HBox makeToolBar = makeToolBar();
 		WebView webView = makeHtmlView();
 		borderPane.setTop(makeToolBar);
+		borderPane.setCenter(webView);
 		borderPane.setBottom(statusbarPane);
-		mainGroup.getChildren().addAll(borderPane, statusbarPane, makeToolBar, webView);
+		mainGroup.getChildren().addAll(borderPane);
 		primaryStage.setScene(mainScene);
 		
 			
