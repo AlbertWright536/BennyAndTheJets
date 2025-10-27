@@ -137,7 +137,7 @@ public class BrowserProgram extends Application {
 		backArrow.setOnAction( e -> {
             history.go( -1 );
 		} );
-		Button forwardArrow = new Button(">");
+		Button forwardArrow = new Button( ">" );
         // Move forward in history
 		forwardArrow.setOnAction( e -> {
             history.go( 1 );
@@ -146,13 +146,22 @@ public class BrowserProgram extends Application {
         // Load new page when the addres bar is changed
 		addressBar.setOnAction( new EventHandler<ActionEvent>( ) {
 			public void handle ( ActionEvent e ) {
-				webEngine.load( addressBar.getText( ) );
+                String address = addressBar.getText( );
+                if ( !(
+                    address.startsWith("https://") ||
+                    address.startsWith("http://") ||
+                    address.startsWith("file://")
+                    ) ) {
+                    webEngine.loadContent( "<html><body><h1>Invalid URL Entered</h1><p>Please check that you started the URL with https://, http://, or file://</p></body></html>" );
+                } else {
+                    webEngine.load( addressBar.getText( ) );
+                }
 			}
 		} );
         addressBox = addressBar;
 		Button help = new Button( "?" );
 		help.setOnAction( e -> {
-			webEngine.loadContent( "<html><body<h1>WebBrowser</H1><br/></body></html>You are using the web browser application developed by BennyAndTheJets, a team of students at Michigan Technological University. This was developed as part of the class CS1131 Accelerated Intro to Programming, Lab session L03. To use this program type a web address in the search bar at the top. If the address that you typed was invalid you will be routed to this screen. If you were routed here then it is likely that you made an error when typing the URL. Make sure that you remember to include https:// at the start of your URL, and .com at the end. If you are unable to remember the URL consider navigating to https://google.com to find the site that way" );
+			webEngine.loadContent( "<html><body><h1>WebBrowser</h1><br/></body></html>You are using the web browser application developed by BennyAndTheJets, a team of students at Michigan Technological University. This was developed as part of the class CS1131 Accelerated Intro to Programming, Lab session L03. To use this program type a web address in the search bar at the top. If the address that you typed was invalid you will be routed to this screen. If you were routed here then it is likely that you made an error when typing the URL. Make sure that you remember to include https:// at the start of your URL, and .com at the end. If you are unable to remember the URL consider navigating to https://google.com to find the site that way" );
         } );
 		toolbar.getChildren( ).addAll( backArrow, forwardArrow, addressBar, help );
 	
