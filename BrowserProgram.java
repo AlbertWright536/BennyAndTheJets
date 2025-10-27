@@ -58,8 +58,9 @@ public class BrowserProgram extends Application {
 	private WebEngine webEngine = null;
 	private TextField statusbar = null;
 	private TextField addressBox = null;
+    // Starting webpage
 	private String webPage = "https://google.com";
-	//alternative starting address is https://migigan.tech
+
 	private int historyIndex = 0;
     private WebHistory history = null;
 
@@ -85,21 +86,23 @@ public class BrowserProgram extends Application {
 	 * @return browser - a WebView container for the WebEngine.
 	 */
 	private WebView makeHtmlView( ) {
-		view = new WebView();
-		webEngine = view.getEngine();
-        history = webEngine.getHistory();
-        	webEngine.getLoadWorker().stateProperty().addListener(
-                new ChangeListener<State>() {
-                    public void changed(ObservableValue ov, State oldState, State newState) {
-                        if (newState == State.SUCCEEDED) {
-                            addressBox.setText(webEngine.getLocation());
-                            stage.setTitle(webEngine.getTitle());
-                        }
+		view = new WebView( );
+		webEngine = view.getEngine( );
+        history = webEngine.getHistory( );
+        // Event to set title to web page name
+        webEngine.getLoadWorker( ).stateProperty( ).addListener(
+            new ChangeListener<State>( ) {
+                public void changed( ObservableValue ov, State oldState, State newState ) {
+                    if ( newState == State.SUCCEEDED ) {
+                        addressBox.setText( webEngine.getLocation( ) );
+                        stage.setTitle( webEngine.getTitle( ) );
                     }
-                });
-        	webEngine.setOnStatusChanged(e -> statusbar.setText( e.getData()));
+                }
+            });
+        // Apparently does not work past Java 8
+        webEngine.setOnStatusChanged( e -> statusbar.setText( e.getData( ) ) );
 		
-		webEngine.load(webPage);
+		webEngine.load( webPage );
 		return view;
 	}
 
@@ -109,50 +112,51 @@ public class BrowserProgram extends Application {
 	 * @return statusbarPane - the HBox layout that contains the statusbar.
 	 */
 	private HBox makeStatusBar( ) {
-		HBox statusbarPane = new HBox();
-		statusbarPane.setPadding(new Insets(5, 4, 5, 4));
-		statusbarPane.setSpacing(10);
-		statusbarPane.setStyle("-fx-background-color: #336699;");
+		HBox statusbarPane = new HBox( );
+		statusbarPane.setPadding( new Insets( 5, 4, 5, 4 ) );
+		statusbarPane.setSpacing( 10 );
+		statusbarPane.setStyle( "-fx-background-color: #336699;" );
 		statusbar = new TextField( );
-		statusbarPane.getChildren().addAll(statusbar);
-		HBox.setHgrow(statusbar, Priority.ALWAYS);	
+		statusbarPane.getChildren( ).addAll( statusbar );
+		HBox.setHgrow( statusbar, Priority.ALWAYS );	
 		return statusbarPane;
 	}
-	private void setWebPage (String page) {
+	private void setWebPage( String page ) {
 		webPage = page;
 	}
-	public String getWebPage () {
+	public String getWebPage ( ) {
 		return webPage;
 	}
 
 	//Make ToolBar, including back and forward buttons, address box, and help button
-	public HBox makeToolBar() {
-		HBox toolbar = new HBox(10);
-		toolbar.setStyle("-fx-background-color: #000000;");
-		Button backArrow = new Button("<");
-		backArrow.setOnAction(e -> {
-            history.go(-1);
-		});
+	public HBox makeToolBar( ) {
+		HBox toolbar = new HBox( 10 );
+		toolbar.setStyle( "-fx-background-color: #000000;" );
+		Button backArrow = new Button( "<" );
+        // Move back in history
+		backArrow.setOnAction( e -> {
+            history.go( -1 );
+		} );
 		Button forwardArrow = new Button(">");
-		forwardArrow.setOnAction(e -> {
-            history.go(1);
-		});
-		TextField addressBar = new TextField();
-		addressBar.setOnAction(new EventHandler<ActionEvent>() {
+        // Move forward in history
+		forwardArrow.setOnAction( e -> {
+            history.go( 1 );
+		} );
+		TextField addressBar = new TextField( );
+        // Load new page when the addres bar is changed
+		addressBar.setOnAction( new EventHandler<ActionEvent>( ) {
 			public void handle ( ActionEvent e ) {
-				webEngine.load(addressBar.getText());
+				webEngine.load( addressBar.getText( ) );
 			}
-		});
-        	addressBox = addressBar;
-		Button help = new Button("?");
-		help.setOnAction(e -> {
-			webEngine.loadContent("<html><body<h1>WebBrowser</H1><br/></body></html>You are using the web browser application developed by BennyAndTheJets, a team of students at Michigan Technological University. This was developed as part of the class CS1131 Accelerated Intro to Programming, Lab session L03. To use this program type a web address in the search bar at the top. If the address that you typed was invalid you will be routed to this screen. If you were routed here then it is likely that you made an error when typing the URL. Make sure that you remember to include https:// at the start of your URL, and .com at the end. If you are unable to remember the URL consider navigating to https://google.com to find the sight that way");
-		
-			}
-		);
-		toolbar.getChildren().addAll(backArrow, forwardArrow, addressBar, help);
+		} );
+        addressBox = addressBar;
+		Button help = new Button( "?" );
+		help.setOnAction( e -> {
+			webEngine.loadContent( "<html><body<h1>WebBrowser</H1><br/></body></html>You are using the web browser application developed by BennyAndTheJets, a team of students at Michigan Technological University. This was developed as part of the class CS1131 Accelerated Intro to Programming, Lab session L03. To use this program type a web address in the search bar at the top. If the address that you typed was invalid you will be routed to this screen. If you were routed here then it is likely that you made an error when typing the URL. Make sure that you remember to include https:// at the start of your URL, and .com at the end. If you are unable to remember the URL consider navigating to https://google.com to find the site that way" );
+        } );
+		toolbar.getChildren( ).addAll( backArrow, forwardArrow, addressBar, help );
 	
-		HBox.setHgrow(addressBar, Priority.ALWAYS);
+		HBox.setHgrow( addressBar, Priority.ALWAYS );
 		return toolbar;
 	}
 
@@ -168,25 +172,22 @@ public class BrowserProgram extends Application {
 	 * the application scene can be set.
 	 */
 	@Override
-	public void start(Stage primaryStage) {
+	public void start( Stage primaryStage ) {
 		// Build your window here
         stage = primaryStage;
-		primaryStage.setTitle(webPage);	
-		BorderPane borderPane = new BorderPane();
-		HBox statusbarPane = makeStatusBar();
-		HBox makeToolBar = makeToolBar();
-		WebView webView = makeHtmlView();
-		borderPane.setTop(makeToolBar);
-		borderPane.setCenter(webView);
-		borderPane.setBottom(statusbarPane);
-		Scene mainScene = new Scene(borderPane);
+		primaryStage.setTitle( webPage );	
+		BorderPane borderPane = new BorderPane( );
+		HBox statusbarPane = makeStatusBar( );
+		HBox makeToolBar = makeToolBar( );
+		WebView webView = makeHtmlView( );
+		borderPane.setTop( makeToolBar );
+		borderPane.setCenter( webView );
+		borderPane.setBottom( statusbarPane );
+		Scene mainScene = new Scene( borderPane );
 	
-		primaryStage.setScene(mainScene);
-		//mainScene.sizeToStage();
-		
-			
+		primaryStage.setScene( mainScene );
 
-		stage.show();
+		stage.show( );
 	}
 	/**
 	 * The main( ) method is ignored in JavaFX applications.
