@@ -24,8 +24,18 @@ public class FractalApp extends Application {
     }
 
     private void drawFractal(Pane pane, List<String> args) {
-        int depth = Integer.parseInt(args.get(0));
-        double size = Double.parseDouble(args.get(1));
+        int depth;
+        double size;
+        if (args.size() < 1) {
+            depth = 5;
+        } else {
+            depth = Integer.parseInt(args.get(0));
+        }
+        if (args.size() < 2) {
+            size = 400;
+        } else {
+            size = Double.parseDouble(args.get(1));
+        }
         sierpinskiIterate(pane, 0, 0, size, depth);
     }
 
