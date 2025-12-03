@@ -1,3 +1,12 @@
+/*
+* Bennie And The Jets
+* Freya Durst
+* Michelle Boscato
+* Marcus Bonifas
+* Albert Wright
+* Class CS1131
+* Michigan Technological University
+*/
 import java.util.ArrayList;
 public class FinalProgramP4 {
     
