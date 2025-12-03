@@ -87,4 +87,19 @@ public class FinalProgramP4 {
     * In the comments indicate if your method produces better or worse results that the Euclidian and Pearson methods. 
     */
     //Develop our own comparison method
+
+    /*
+PART 5
+
+Write a 3 page paper that analyzes the the project and its results.
+
+Possible topics to cover in the report include, but are not limited to:
+
+A comparison between the results of the Euclidian and Pearson similarity methods.
+An analysis of the play list results. Are the tracks listed good matches for the user?
+How might you improve the relevance of the generated play list tracks?
+How might you modify the program to compare tracks across multiple fields (e.g., ARTIST and GENRE, TRACK and RANK, etc.)
+An analysis of the efficiency of your code. How might the speed, memory footprint, or accuracy be improved.
+What challenges did you face developing the program and how did you overcome them?
+    */
 }
