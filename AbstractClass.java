@@ -240,7 +240,7 @@ public abstract class AbstractClass {
             sumX2 += Math.pow( array1.get( i ) - mean1, 2.0 );
             sumY2 += Math.pow( array2.get( i ) - mean2, 2.0 );
         }
-        return ( 1.0 + ( sumXY / ( Math.sqrt( sumX2 ) * Math.sqrt( sumY2 ) ) ) ) / 2.0;
+        return ( 1.0 + ( sumXY / ( Math.sqrt( sumX2 ) * Math.sqrt( sumY2 ) + 1.0 ) ) ) / 2.0;
     }
 }
 // END OF ABSTRACT CLASS ================================================

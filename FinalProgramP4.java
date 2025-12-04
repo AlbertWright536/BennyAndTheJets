@@ -178,10 +178,10 @@ public class FinalProgramP4 extends AbstractClass {
 
     public static void main(String[] args) {
         FinalProgramP4 program = new FinalProgramP4( );
-        HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "ELIJAH", "ARTIST", "Euclidean" );
+        HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "LUCA", "GENRE", "PEARSON" );
         
         for (String user : program.getUsers( ) ) {
-            if ( user.equals( "ELIJAH" ) ) {
+            if ( user.equals( "LUCA" ) ) {
                 continue;
             }
             System.out.println( user + ": " + lucaScores.get( user ) );
