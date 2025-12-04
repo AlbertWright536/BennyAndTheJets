@@ -1,0 +1,471 @@
+Timestamp,ID,Rank,Title,Artist,Genre,Album,Number of Plays
+11/8/2025 0:10:20,Julian,7,Crash,Neovaii,EDM,Onward,400
+11/3/2025 18:52:10,William,8,Lovefool,The Cardigans,Alternative,First Band on the Moon,15
+11/5/2025 15:13:16,Eleanor,2,Viva la Vida,Coldplay,Alternative,Viva la Vida or Death and All His Friends,11
+11/6/2025 15:01:10,Ethan,2,Jigsaw Falling Into Place,Radiohead,Alternative,In Rainbows,57
+11/6/2025 15:04:48,Ethan,6,"Athens, France","Black Country, New Road",Alternative,For The First Time,15
+11/6/2025 15:05:17,Ethan,7,Country Sad Ballad Man,Blur,Alternative,Blur,14
+11/6/2025 15:07:52,Ethan,9,Trinidad,Geese,Alternative,Getting Killed,11
+11/6/2025 15:08:42,Ethan,10,Thunder,Maruja,Alternative,Knocknarea,11
+11/7/2025 13:03:33,John,2,circus psycho,diggy graves,Alternative,Single,50
+11/7/2025 13:34:09,Chloe,5,Step On Up,The Living Tombstone &n McGwire,Alternative,Single,56
+11/5/2025 15:15:48,Eleanor,4,Clocks,Coldplay,Alternative,A Rush of Blood to the Head,10
+11/6/2025 12:43:01,Eliana,10,I'd love to change the world,Ten Years After,Blues,A Space in Time,50
+11/3/2025 20:43:20,Sofia,1,Broken Bones,Kaleo,Blues,A/B,300
+11/7/2025 22:36:02,Aria,6,Cogwork Dancers,Christopher Larkin,Classical,Hollow Knight: Silksong (Original Soundtrack),36
+11/6/2025 12:40:04,Eliana,8,Shades of Gray,Robert Earl Keen,Country,Picnic,40
+11/3/2025 15:06:58,Amelia,1,Fishing In The Dark,Nitty Gritty Dirt band,Country,Hold On,1000
+11/3/2025 15:10:09,Amelia,3,Old Man,Neil Young,Country,Harvest,900
+11/3/2025 15:11:22,Amelia,4,Old hippie,The Bellamy Brothers,Country,Howard & David,800
+11/3/2025 15:12:49,Amelia,5,Southern Cross,"Crosby, Stills, and Nash",Country,Daylight Again,800
+11/3/2025 15:14:47,Amelia,6,Can't You See,The Marshall Tucker band,Country,The Marshall Tucker Band,700
+11/3/2025 15:16:33,Amelia,7,Rocky Mountain High,John Denver,Country,Rocky Mountain High,700
+11/3/2025 16:02:09,Lucas,7,Ghost Riders in the Sky,Johnny Cash,Country,Silver,50
+11/3/2025 16:02:47,Lucas,4,Hurt,Johnny Cash,Country,American IV: The Man Comes Around,40
+11/3/2025 18:57:20,William,3,The Bottom,Chris Stapleton,Country,Higher,30
+11/3/2025 20:49:16,Sofia,10,Love Somebody,Morgan Wallen,Country,I'm The Problem,50
+11/5/2025 10:58:31,Harper,3,Cruise,Florida Georgia Line,Country,Here’s to the Good Times,80
+11/5/2025 17:58:24,Daniel,2,Where'd That Girl Go,Morgan Wallen,Country,I'm The Problem,200
+11/5/2025 17:59:03,Daniel,1,Indigo,Sam Barber,Country,It is a single,200
+11/7/2025 13:07:49,John,5,this,darius rucker,Country,"Charleston, SC 1966",20
+11/7/2025 19:49:55,Luca,7,Stars of the Midnight Range,Johnny Bond,Country,Heart Soul,40
+11/7/2025 23:18:04,Dylan,4,The Gambler,Kenny Rogers,Country,Single,200
+11/7/2025 13:48:45,Ellie,8,Tennessee Whiskey,Chris Stapleton,Country,Traveller,75
+11/7/2025 13:45:16,Ellie,1,Straight and Narrow,Sam Barber,Country,Straight and Narrow (Single),38
+11/7/2025 19:51:51,Luca,9,I WANT YOU,Carter Vail,Country,The Interstellar Tennis Championship Vol. II,40
+11/7/2025 19:51:27,Luca,8,NAPOLEON,Carter Vail,Country,The Interstellar Tennis Championship Vol. II,40
+11/5/2025 21:01:59,Aurora,2,Motel 9 A,Novi Novog,Country,Swing with Western,499
+11/8/2025 0:08:07,Julian,8,I Remember,Tristam - Monstercat,EDM,Monstercat 007 - Solace,220
+11/8/2025 0:29:02,Julian,3,Die For You,Grabbitz,EDM,"VALORANT Sounds, Vol. 1",850
+11/8/2025 0:30:55,Julian,1,Fights,AGST,EDM,Fights,1000
+11/8/2025 0:32:20,Julian,2,Escaping Gravity,"Cecilia Gault, TheFatRat",EDM,Unity,950
+11/6/2025 11:50:15,Michael,7,Suffocation,Crystal Castles,Electronic,Crystal Castles (II),35
+11/7/2025 23:47:51,Sophia,7,Hammer Of Justice,Toby Fox,Electronic,Single,1
+11/7/2025 8:36:29,Elizabeth,9,Aftermath,Caravan Palace,Electronic,Robot face,30
+11/3/2025 15:21:30,Mateo,6,laced up,tsubi club,Electronic,laced up,120
+11/3/2025 15:06:48,Oliver,1,DUMBASS!!,Machine Girl,Electronic,...BECAUSE I'M YOUNG ARROGANT AND HATE EVERYTHING YOU STAND FOR,50
+11/3/2025 15:07:36,Oliver,2,Psychic Attack,Machine Girl,Electronic,MG Ultra,50
+11/3/2025 15:08:45,Oliver,4,GIRL HELL 1999,femtanyl,Electronic,CHASER,70
+11/3/2025 15:09:15,Oliver,5,IT'S TIME,femtanyl,Electronic,REACTOR,50
+11/3/2025 15:09:47,Oliver,6,Dread Architect,Machine Girl,Electronic,Psychowarrior: MG Ultra X,10
+11/6/2025 14:07:26,James,8,Like A G6,Far East Movement,Electronic,Free Wired,30
+11/10/2025 15:38:30,David,10,Cosmo Funk,Snail's House,Electronic,エイリアン☆ポップ,5
+11/3/2025 15:07:14,Charlotte,1,Gasping for Air,Grabbitz,Electronic,Big Epic Nothing,83
+11/3/2025 15:08:39,Charlotte,3,Pigs in the Sky,Grabbitz,Electronic,Time Isn't Real,66
+11/3/2025 15:09:29,Charlotte,4,Pain Killer,Grabbitz,Electronic,Time Isn't Real,60
+11/3/2025 15:12:19,Charlotte,6,Information Overload,Grabbitz,Electronic,Single,35
+11/3/2025 15:14:35,Charlotte,7,Comedown,Grabbitz,Electronic,Time Isn't Real,54
+11/6/2025 9:49:07,Elizabeth,2,Beautiful Light,Uppermost,Electronic,Origins,30
+11/10/2025 15:02:40,David,2,Evening2009,Windows 96,Electronic,Awkward Dance Music,5
+11/10/2025 15:03:27,David,1,Late Night Television,Windows 96,Electronic,Awkward Dance Music,5
+11/10/2025 15:04:53,David,3,You're perfect,Windows 96,Electronic,How To See Through Walls,5
+11/10/2025 15:06:06,David,4,Lynx,Hotel Pools,Electronic,Lynx,6
+11/10/2025 15:07:13,David,5,Apartments,Windows 96,Electronic,Yes Da Da Da,5
+11/10/2025 15:10:13,David,6,Crystalline,Windows 96,Electronic,Empty Hiding World,5
+11/10/2025 15:16:46,David,7,Warmpop,ESPRIT 空想,Electronic,200% Electronica,6
+11/10/2025 15:18:12,David,8,Resonance,Home,Electronic,Odyssey,9
+11/7/2025 8:21:12,Elizabeth,3,Ordinary life,Living Tombstone,Electronic,Single,50
+11/7/2025 8:33:46,Elizabeth,7,Hopes and Dreams,Toby Fox,Electronic,Undertale,30
+11/3/2025 15:08:09,Charlotte,2,Hero,Grabbitz,Electronic,Let Them Only See Butterflies,58
+11/3/2025 15:11:04,Charlotte,5,Fly on the Wall,Grabbitz,Electronic,Single,24
+11/3/2025 15:15:08,Charlotte,8,The Ugly,Grabbitz,Electronic,Time Isn't Real,51
+11/3/2025 15:08:48,Emma,4,Cooler Than Me,Mike Posner,Electronic,Single,150
+11/7/2025 19:02:21,Nora,1,Dyad (feat. unit.0),Jamie Paige,Electronic,Constant Companions (Deluxe Edition),50
+11/7/2025 19:03:52,Nora,2,BUTCHER VANITY,FLAVOR FOLEY,Electronic,CARDIAC CONTREPOINT,30
+11/7/2025 19:12:55,Nora,7,weathergirl,FLAVOR FOLEY,Electronic,Single,69
+11/7/2025 19:13:55,Nora,8,Superfusion,Maiku Tachibana,Electronic,Single,30
+11/3/2025 15:11:31,Noah,9,Late Nights,Brawparty,Electronic,Midnight Tapes,100
+11/7/2025 23:18:34,Dylan,5,Wonderland,Caravan Palace,Electronic,Single,400
+11/8/2025 0:20:17,Julian,5,Till It's Over,Tristam,Electronic,Monstercat 016 - Expedition,800
+11/7/2025 22:27:08,Aria,8,Battle! Penny,Game Freak,Electronic,Pokémon Scarlet ・ Violet + The Hidden Treasure of Area Zero Super Music Collection,40
+11/3/2025 15:10:22,Oliver,7,XENON,KIDNAMEDFINGER,Electronic,KIDNAMEDFINGER,10
+11/7/2025 22:48:31,Aria,4,Hammer of Justice,Toby Fox,Eletronic,DELTARUNE Chapters 3+4 OST,49
+11/3/2025 15:09:27,Mia,3,Thank You For The Venom,My Chemical Romance,Emo,Three Cheers For Sweet Revenge,200
+11/3/2025 15:11:38,Mateo,1,The Title Track,Origami Angel,Emo,Somewhere City,269
+11/3/2025 15:13:28,Mateo,3,Where Blue Light Blooms,Origami Angel,Emo,Feeling Not Found,171
+11/3/2025 15:22:21,Mateo,7,gg,Origami Angel,Emo,GAMI GANG,111
+11/3/2025 15:23:15,Mateo,8,Escape Rope,Origami Angel,Emo,Somewhere City,108
+11/3/2025 15:23:43,Mateo,9,Noah Fence,Origami Angel,Emo,GAMI GANG,105
+11/3/2025 15:24:20,Mateo,10,Doctor Whomst,Origami Angel,Emo,Somewhere City,102
+11/6/2025 15:11:54,Mia,4,Cancer,My Chemical Romance,Emo,Welcome to The Black Parade,200
+11/3/2025 15:08:11,Oliver,3,Animals,STOMACH BOOK,Emo,STOMACH BOOK,30
+11/3/2025 15:11:08,Oliver,8,BAMBI,STOMACH BOOK,Emo,GOODNIGHT HYPNOPOMP,10
+11/3/2025 15:11:35,Oliver,9,Paper Dolls,STOMACH BOOK,Emo,GOODNIGHT HYPNOPOMP,10
+11/3/2025 15:12:57,Mateo,2,Lorraine (2023 Remaster),Big Thief,Folk,Masterpiece (2023 Remaster),237
+11/3/2025 15:19:24,Elijah,6,Sundown,Gordon Lightfoot,Folk,Sundown,112
+11/4/2025 13:02:08,Camila,3,GET OUT OF MY YARD,Lil Darkie,Folk,USD,700
+11/5/2025 15:02:32,Ezra,2,A quick one before the eternal A quick one before the eternal worm devours appalachiaworm devours appalachia,Lizard in the Spring,Folk,Single,114
+11/5/2025 18:05:00,Violet,8,First I'm Sorry,Haley Heynderickx,Folk,Fish Eyes EP,25
+11/3/2025 15:08:42,Mia,2,Blister In The Sun,Violent Femmes,Folk,Violent Femmes,200
+11/3/2025 15:29:05,Elijah,6,Father and Son,Yusuf/Cat Stevens,Folk,Tea for the Tillerman,167
+11/3/2025 21:20:35,Benjamin,6,Piano Man,Billy Joel,Folk,Piano Man,125
+11/4/2025 14:24:25,Levi,8,Ends Of The Earth,Lord Huron,Folk,Lonesome Dreams,400
+11/3/2025 18:56:18,William,1,Blowing Smoke,Gracie Abrams,Folk,The Secret of Us,60
+11/3/2025 20:47:33,Sofia,7,WILDFLOWER,Billie Eilish,Folk,Hit Me Hard and Soft,50
+11/6/2025 15:15:30,Mia,9,First Day of My Life,Bright Eyes,Folk,"I'm wide awake, it's morning",300
+11/7/2025 23:19:54,Aria,1,"""Bury my Mother Pale and Slight""","Sam ""Amalgemotion""",Folk,Single,999
+11/7/2025 23:16:34,Dylan,2,Black Velvet Band,The dubliners,Folk,Single,75
+11/3/2025 9:35:22,Liam,4,Paigaam,Amrinder Gill,Folk,Judaa 3,175
+11/3/2025 9:34:41,Liam,3,Judge,Amrinder Gill,Folk,Judaa,190
+11/7/2025 23:21:25,Dylan,8,The Devil Went Down To Georgia,The Charlies Daniels Band,Folk,Single,300
+11/6/2025 14:58:54,Sebastian,9,Tin Roof,Blessing Offor,Gospel,My Tribe,65
+11/5/2025 15:16:45,Luna,10,Chain Breaker,Zach Williams,Gospel,Chain Breaker,55
+11/6/2025 4:33:05,Samuel,8,Sugar,Brockhampton,Hip Hop,Saturation III,4
+11/6/2025 4:37:52,Samuel,9,Hold on,The Internet,Hip Hop,Hive Mind,6
+11/3/2025 16:01:15,Lucas,6,What's up Danger,Blackway and Black Caviar,Hip Hop,Spider-Man: Into the Spider-Verse (Original Score),35
+11/7/2025 8:38:39,Elizabeth,10,The Precious Hours,Proleter,Hip hop,Bubbles,40
+11/7/2025 22:34:12,Alexander,6,Rock Your Body,Justin Timberlake,Hip Hop,Justified,10
+11/6/2025 4:41:44,Samuel,10,Orange Soda,Baby Keem,Hip Hop,Die For my Bitch,4
+11/6/2025 4:21:40,Samuel,4,Summers Over Interlude,Drake & Majid Jordan,Hip Hop,Views,5
+11/3/2025 15:09:32,Emma,5,Bills,LunchMoney Lewis,Hip Hop,Single,50
+11/3/2025 15:12:16,Emma,8,Swimming Pools,Kendrick Lamar,Hip Hop,Single,100
+11/6/2025 14:56:20,Sebastian,7,MAMA,NF,Hip Hop,The Search,50
+11/7/2025 13:46:14,Ellie,4,Alternative Outro,LUCKI,Hip Hop,FLAWLESS LIKE ME,27
+11/7/2025 13:49:38,Ellie,9,Violent Crimes,Kanye West feat. Ty Dolla $ign & 070 Shake,Hip Hop,Ye,94
+11/7/2025 9:31:24,Hazel,9,Lose yourself,Eminem,Hip Hop,8 Mile,20
+11/6/2025 14:09:35,James,10,Feel Good Inc.,Gorillaz,Hip Hop,Demon Days,50
+11/5/2025 15:09:46,Eleanor,1,2024,Playboi Carti,Hip Hop,I AM MUSIC,18
+11/5/2025 15:14:51,Eleanor,3,2000 EXCURSION,"Travis Scott, Sheck Wes & Don Toliver",Hip Hop,JACKBOYS 2,11
+11/7/2025 13:05:09,Chloe,10,Novocaine,"GenriX, COBRAL & Shiloh Dynasty",Hip Hop,Unfortunatly yours,24
+11/7/2025 13:16:20,Chloe,7,The End,Lil Uzi Vert & Baby Metal,Hip Hop,Pink Tape,51
+11/7/2025 18:05:19,Eleanor,6,Whatever She Wants,Bryson Tiller,Hip Hop,Single,6
+11/7/2025 18:06:28,Eleanor,7,GBP (feat. 21 Savage),Central Cee/21 Savage,Hip Hop,CAN'T RUSH GREATNESS,5
+11/7/2025 18:07:23,Eleanor,8,Virginia Beach,Drake,Hip Hop,For All The Dogs Scary Hours Edition,4
+11/7/2025 18:08:57,Eleanor,9,Off The Meter (with Playboi Carti & Destroy Lonely),Ken Carson/Playboi Carti/Destroy Lonely,Hip Hop,More Chaos,4
+11/7/2025 18:09:51,Eleanor,10,Stuff (feat. Travis Scott),Lil Baby/Travis Scott,Hip Hop,WHAM,3
+11/7/2025 12:55:42,Chloe,2,Love Song,QKReign,Hip Hop,Love Song EP,82
+11/5/2025 15:13:49,Jack,1,Ordinary Joe,Nujabes,Hip Hop,Modal soul,30
+11/3/2025 9:41:22,Liam,8,Coolin,"Chani Nattan, Inderpal Moga, Jazzy B",Hip Hop,Single,130
+11/3/2025 9:38:47,Liam,6,Bande 4,"Watan Sahi, Jasmeen Akhtar, Dr Zeus",Hip Hop,Single,160
+11/3/2025 9:37:29,Liam,5,Take it Easy,Karan Aujla,Hip Hop,Four You,200
+11/3/2025 9:33:07,Liam,1,295,Sidhu Moose Wala,Hip Hop,Moosetape,230
+11/3/2025 15:18:57,Henry,3,Fresno,"Shady Moon, Lil God Dan",Hip Hop,Fresno,30
+11/7/2025 19:44:15,Luca,3,Stuck Inside Green Skeleton Full Cover,sono_chrome,Horror,Single,50
+11/7/2025 8:28:33,Elizabeth,5,Turning out,AJR,House,The Click(deluxe edition),20
+11/5/2025 17:47:21,Violet,1,Everybody Scream,Florence + the Machine,Indie,Everybody Scream (Chamber Version),20
+11/5/2025 17:55:41,Violet,4,Ophelia (Live),Kiltro,Indie,Live,13
+11/5/2025 17:57:40,Violet,5,Count The Ways,The Last Dinner Party,Indie,From The Pyre,17
+11/5/2025 18:07:22,Violet,9,Ms. Supernova,Friday Pilots Club,Indie,Life Support / Ms. Supernova,20
+11/4/2025 12:56:44,Camila,8,The Bard's Last Note,Ricky Desktop & Kim Dracula,Indie,Single,450
+11/4/2025 12:58:38,Camila,6,Bad Kids,347aidan,Indie,Single,700
+11/6/2025 13:59:08,James,2,Cold Cold Man,Saint Motel,Indie,My Type EP,30
+11/6/2025 14:14:11,James,1,Tardigrade Song,Cosmo Sheldrake,Indie,Pelicans We EP,40
+11/7/2025 8:35:29,Elizabeth,8,Eighth Wonder,Lemon Demon,Indie,Almanac 2009,40
+11/7/2025 20:56:56,Elias,9,Forbidden Fruit,Tommee profitt,Indie,the fall,22
+11/7/2025 21:08:20,Elias,4,play with fire,sam tinnesz,Indie,Single,10
+11/7/2025 21:11:42,Elias,2,what could have been,sting,Indie,arcane season 1,50
+11/7/2025 22:38:23,Alexander,10,Seventh Heaven,INOHA,Indie,ALOHA INOHA,15
+11/6/2025 14:01:09,James,3,Supermassive Black Hole,Muse,Indie,Black Holes and Revelations,30
+11/6/2025 14:05:56,James,7,My Type,Saint Motel,Indie,My Type EP,30
+11/6/2025 14:08:28,James,9,Lovefool,The Cardigans,Indie,First Band on the Moon,20
+11/3/2025 15:07:20,James,1,Deceptacon,Le Tigre,Indie,Debut,30
+11/5/2025 15:09:15,Ezra,8,Dream Sweet in Sea Major,Miracle Musical,Indie,Hawaii: Part II,50
+11/3/2025 15:10:16,Emma,6,Wildflower,Billie Eilish,Indie,Single,50
+11/3/2025 15:13:11,Emma,9,Cocoon,Catfish and the Bottlemen,Indie,Single,175
+11/5/2025 15:01:00,Ezra,1,Orgasm of Death,The Growlers,Indie,Casual Acquaintances,104
+11/5/2025 15:05:48,Ezra,5,Psychics in LA,Peach Pit,Indie,You and your friends,51
+11/5/2025 15:06:47,Ezra,6,Neon Roses,The Technicolors,Indie,Metaphysical,51
+11/5/2025 15:07:44,Ezra,7,Ode to the Mets,The Strokes,Indie,The New Abnormal,20
+11/5/2025 15:11:08,Ezra,9,Khalil Gibran,Starfucker,Indie,Miracle Mile,40
+11/5/2025 15:12:03,Ezra,10,I Just Think I'm Smart,Wild Party,Indie,Cheeky Giants,129
+11/5/2025 21:02:59,Aurora,1,Touch,Alice Phobe Lou,Indie,Touch,498
+11/5/2025 21:05:39,Aurora,6,Bad Habit,Steve Lacy,Indie,Gemini Rights,500
+11/5/2025 21:06:55,Aurora,7,Break,Alex G,Indie,unreleased track,500
+11/6/2025 15:12:40,Mia,5,Nintendo 64,Alex G,Indie,before i leave,150
+11/6/2025 15:13:04,Mia,6,Mary,Alex G,Indie,Trick,200
+11/6/2025 15:13:51,Mia,7,Velvet Ring,Big Thief,Indie,Masterpiece,200
+11/6/2025 15:14:32,Mia,8,Sober to Death,Car Seat Headrest,Indie,Twin Fantasy,300
+11/5/2025 18:03:06,Violet,7,"Eventually, Darling",Declan KcKenna,Indie,Zeros,30
+11/7/2025 21:03:49,Elias,7,take a slice,glass animals,Indie,how to be a human being,35
+11/3/2025 15:27:30,Isabella,6,Daddy Cop,Zander Hawley,Indie,"Daddy Cop (From the TV Show ""The Rookie"")",150
+11/4/2025 14:10:55,Levi,1,F1,Hans Zimmer,Instrumental,F1 The Album,200
+11/4/2025 14:19:35,Levi,4,"Battlefield 4 ""Warsaw"" Theme",Reyan & Rami,Instrumental,Battlefield 4 (Original Soundtrack),200
+11/4/2025 14:20:37,Levi,5,Top Gun Anthem,Harold Faltermeyer & Steve Stevens,Instrumental,Top Gun (Original Motion Picture Soundtrack),200
+11/4/2025 14:22:27,Levi,6,Arrival To Earth,Steve Jablonsky,Instrumental,Transformers: The Score,300
+11/3/2025 15:08:48,Noah,5,The Cat On The Roof,Nouvelle Story,Jazz,Vengeance,300
+11/3/2025 15:09:26,Noah,6,Rush,SEATBELTS,Jazz,COWBOY BEBOP (Original Motion Picture Soundtrack),150
+11/3/2025 15:12:01,Noah,10,Birthing,Swans,Jazz,Birthing,7
+11/5/2025 15:10:26,Luna,5,Jennsong,Adam Meckler,Jazz,Magnificent Madness,95
+11/7/2025 23:19:18,Dylan,6,Welcome To My Bistro,Yoo Jongho,Jazz,Dave The Diver OST,500
+11/7/2025 23:21:50,Dylan,9,The very thought of you,Rudy Winston,Jazz,Single,40
+11/3/2025 15:07:51,Mia,1,It's Oh so Quiet,Björk,Jazz,Post,200
+11/6/2025 15:02:32,Ethan,4,Sugar/Tzu,black midi,Jazz,Hellfire,30
+11/7/2025 19:45:35,Luca,4,Somethin' Stupid,Frank Sinatra,Jazz,The World We Knew,40
+11/4/2025 13:03:27,Camila,2,REVOLVER,Lil Darkie,Jazz,Single,850
+11/3/2025 15:10:56,Noah,8,When The Sun Loves The Moon,Reinaeiry,Jazz,When The Sun Loves The Moon,350
+11/3/2025 20:43:46,Sofia,2,Vivir Mi Vida,Marc Anthony,Pop,3,300
+11/4/2025 12:57:52,Camila,7,No Sudden Movement,Five Finger Death Punch,Metal,Got Your Six,600
+11/7/2025 20:53:54,Lily,2,Details Matter,Northlane,Metal,Alien,240
+11/3/2025 16:05:39,Lucas,5,Enter Sandman,Metallica,Metal,Metallica,40
+11/3/2025 15:31:43,Isabella,8,Through the Fire and the Flames,Dragonforce,Metal,Inhuman Rampage,300
+11/3/2025 15:34:54,Isabella,10,Bury the Light,Casey Edwards,Metal,Bury the Light,500
+11/4/2025 14:26:52,Levi,10,Iridescent,LINKIN PARK,Metal,A Thousand Suns,300
+11/5/2025 15:09:39,Luna,4,duality,Slipknot,Metal,Vol. 3: The Subliminal Verses,105
+11/5/2025 15:13:12,Luna,7,Psychosocial,Slipknot,Metal,All Hope Is Gone,76
+11/6/2025 11:56:14,Michael,10,One,Metallica,Metal,...And Justice For All,75
+11/7/2025 20:55:46,Lily,4,Hearts Divided,Renascentia,Metal,Dead Reflections - EP,200
+11/7/2025 20:57:39,Lily,6,Unending,Renascentia,Metal,Face of the Abyss,400
+11/7/2025 20:58:18,Lily,7,Eternal,Renascentia,Metal,Face of the Abyss,400
+11/7/2025 20:59:05,Lily,8,The Faceless Beast,Renascentia,Metal,Face of the Abyss,400
+11/7/2025 21:00:11,Lily,10,Chasing a Ghost,Renascentia,Metal,Chasing a Ghost - Single,200
+11/7/2025 20:55:22,Elias,10,sLeepwALkeR,the pretty wild,Metal,Single,20
+11/4/2025 12:59:28,Camila,5,Hunting Soul (English Version),Toshiro,Metal,Single,500
+11/7/2025 22:38:21,Aria,5,Nightmare King,Christopher Larkin,Metal,Hollow Knight: Gods & Nightmares,51
+11/7/2025 16:41:31,Hudson,1,Would You Fall in Love with Me Again,Jorge Rivera-Herrans,Musical Theatre,Epic the musical,70
+11/7/2025 16:54:40,Hudson,5,Wouldn't You Like,Jorge Rivera-Herrans,Musical Theatre,EPIC: The Circe Saga,28
+11/7/2025 17:01:55,Hudson,6,Ruthlessness,Jorge Rivera-Herrans,Musical Theatre,EPIC: The Ocean Saga,55
+11/7/2025 16:58:40,Hudson,8,Just a Man,Jorge Rivera-Herrans,Musical Theatre,EPIC: The Troy Saga,46
+11/3/2025 16:14:09,Ava,2,The Lovecats,The Cure,New Wave,Japanese Whispers,150
+11/3/2025 16:26:00,Ava,4,Hanging on the Telephone,Blondie,New Wave,Parallel Lines,100
+11/7/2025 22:18:10,Aria,9,The Safety Dance,Men Without Hats,New wave,Rhythm of Youth,13
+11/7/2025 13:47:25,Ellie,6,Sparks,Hildur Guðnadóttir,Orchestral,Without Sinking,68
+11/7/2025 23:00:29,Aria,3,Skarrsinger Karmelita,Christopher Larkin,Orchestral,Hollow Knight: Silksong (Original Soundtrack),19
+11/3/2025 15:10:36,Sophia,3,Nightmare King,Christopher Larkin (Team Cherry),Orchestral,Gods and Nightmares,20
+11/5/2025 17:52:45,Violet,3,Backseat Driver,Orla Gartland,Pop,Everybody Needs a Hero,110
+11/8/2025 0:15:57,Julian,6,mr. sunshine,Arden Jones,Pop,age tape 0,500
+11/10/2025 15:21:36,David,9,I Must Apologize,PinkPantheress,Pop,to hell with it,4
+11/6/2025 4:17:23,Samuel,3,Sienna,The Marias,Pop,Submarine,20
+11/3/2025 15:24:44,Isabella,5,SHADOWBORN,"Sawano Hiroyuki, Benjamin, mpi",Pop,Solo Leveling Season2 -Arise from the Shadow- Original Soundtrack,500
+11/3/2025 16:12:19,Ava,1,Wuthering Heights,Kate Bush,Pop,The Kick Inside,250
+11/3/2025 16:38:06,Ava,7,L'Amour Looks Something Like You,Kate Bush,Pop,The Kick Inside,200
+11/7/2025 23:20:41,Dylan,7,Dream Sweet In Sea Major,Joe Hawley,Pop,Hawaii: part ii,100
+11/7/2025 19:07:11,Nora,3,I / Me / Myself,Will Wood,Pop,The Normal Album,200
+11/3/2025 16:22:45,Ava,3,For No One,The Beatles,Pop,Revolver,100
+11/3/2025 15:11:57,Theodore,4,Let It Be,The Beatles,Pop,Let It Be,42
+11/6/2025 14:57:46,Sebastian,8,Give Me Your Eyes,Brandon Heath,Pop,What If We,120
+11/7/2025 22:36:23,Alexander,8,Chicago,Michael Jackson,Pop,XSCAPE,15
+11/7/2025 22:16:45,Aria,10,Never Gonna Give You Up,Rick Astley,Pop,Whenever You Need Somebody,27
+11/7/2025 19:12:00,Nora,6,Oblivion for Two,Mothica,Pop,Kissing Death,40
+11/3/2025 16:41:49,Ava,10,"Sea, Swallow Me",Cocteau Twins,Pop,The Moon and the Melodies,150
+11/3/2025 15:12:32,Oliver,10,"...well, better than the alternative",Will Wood,Pop,The Normal Album,30
+11/5/2025 15:09:41,Sebastian,1,A Little Bit Of Everything,Lizzy McAlpine,Pop,Single,150
+11/5/2025 15:10:43,Sebastian,2,Compass,Rosarrie,Pop,Single,500
+11/5/2025 15:13:35,Sebastian,4,Apple Pie,Lizzy McAlpine,Pop,Give Me A Minute,250
+11/5/2025 15:19:13,Sebastian,6,Ultimately,Khai Dreams,Pop,Single,300
+11/6/2025 14:04:54,James,6,Cigarettes out the Window,TV Girl,Pop,Who Really Cares,20
+11/6/2025 15:00:43,Sebastian,10,if you do,jodi,Pop,Single,50
+11/7/2025 13:43:04,Chloe,1,Kekka Orai,Kocchi No Kento,Pop,Kekka Orai - My Hero Academia: Vigilantes Opening Theme Song - Single,98
+11/7/2025 16:51:16,Hudson,4,"Love me, Love me, Love me",Kikuo,Pop,Kikuo Miku 3,40
+11/7/2025 17:00:07,Hudson,7,Spoken For,FLAVOR FOLLY,Pop,Spoken For,26
+11/7/2025 21:07:09,Elias,5,hollow,stray kids,Pop,japanese rock,35
+11/3/2025 15:06:12,Noah,1,One Man Circus,Madilyn Mei,Pop,A Thousand Songs About It All: Act One,400
+11/3/2025 15:11:27,Henry,1,Notion,The Rare Occasions,Pop,Notion,40
+11/3/2025 15:13:59,Emma,10,Pink Pony Club,Chappell Roan,Pop,Single,25
+11/3/2025 15:19:44,Henry,4,Snap Out of It,Arctic Monkeys,Pop,AM,25
+11/3/2025 15:22:20,Henry,5,Better,Khalid,Pop,Better,34
+11/3/2025 15:34:31,Henry,8,Still into You,Paramore,Pop,Paramore,20
+11/3/2025 15:35:33,Henry,9,Space Song,Beach House,Pop,Depression Cherry,18
+11/3/2025 16:04:17,Lucas,2,My Way,Frank Sinatra,Pop,My Way,30
+11/3/2025 18:46:47,William,5,Touch,Katseye,Pop,SIS (Soft is Strong),35
+11/3/2025 18:50:55,William,2,WHERE IS MY HUSBAND!,Raye,Pop,WHERE IS MY HUSBAND!,20
+11/3/2025 18:53:24,William,6,House Tour,Sabrina Carpenter,Pop,Man's Best Friend,15
+11/3/2025 18:54:46,William,10,The Fate of Ophelia,Taylor Swift,Pop,The Life of a Showgirl,10
+11/4/2025 18:00:18,Theodore,6,Maneater,Nelly Furtado,Pop,Loose,46
+11/5/2025 10:56:55,Harper,1,Celestial,Ed Sheeran,Pop,Celestial,100
+11/5/2025 10:57:47,Harper,2,Treasure,Bruno Mars,Pop,Unorthodox Jukebox,90
+11/5/2025 10:59:59,Harper,5,Heat Waves,Glass Animals,Pop,Dreamland,70
+11/5/2025 11:01:31,Harper,7,Eternity,Alex Warren,Pop,"You'll Be Alright, Kid",50
+11/5/2025 15:17:22,Sebastian,5,Live A Little,Chaz Cardigan,Pop,Single,120
+11/5/2025 15:17:48,Eleanor,5,Mirrors,Justin Timberlake,Pop,The 20/20 Experience,9
+11/7/2025 9:36:01,Hazel,4,Shape of you,Ed Sheeran,Pop,+(Deluxe),6
+11/7/2025 9:37:25,Hazel,6,where is the love,Justein bieber,Pop,Single,9
+11/7/2025 9:39:23,Hazel,10,Billionaire,Bruno Mars,Pop,Lazarue- Travie,40
+11/7/2025 9:41:11,Hazel,9,attention,Charlie puth,Pop,voicenote,10
+11/7/2025 9:42:30,Hazel,10,walk in the woods,Benson Boone,Pop,(single .EP),30
+11/7/2025 9:44:31,Hazel,10,"The sun goes down, the sun comes up",TobyMac,Pop,Life after Death,25
+11/7/2025 9:48:29,Hazel,10,Shape of you,Ed Sheeran,Pop,(deluxe),30
+11/7/2025 9:52:29,Hazel,10,Story of my life,One Direction,Pop,Midnight Memories,40
+11/7/2025 11:25:09,Asher,10,Manchild,Sabrina Carpenter,Pop,Manchild,79
+11/7/2025 11:26:10,Asher,5,HEAR ME OUT,AmaLee,Pop,HEAR ME OUT,490
+11/7/2025 13:01:50,John,1,too sweet,hozier,Pop,unreal unearth,100
+11/7/2025 13:05:10,John,3,take me to church,hozier,Pop,2014 debut,150
+11/7/2025 13:06:45,John,4,just my type,the vamps,Pop,Single,50
+11/7/2025 13:08:55,John,6,I'm not famous,AJR,Pop,the click,60
+11/7/2025 13:36:28,Chloe,4,Itazura,Koven Wei,Pop,itazura - Single,65
+11/7/2025 13:45:48,Ellie,3,Stitches,Shawn Mendes,Pop,Handwritten,51
+11/7/2025 13:48:05,Ellie,7,Firework,Katy Perry,Pop,Teenage Dream,83
+11/7/2025 19:42:14,Luca,2,Why Would I?,Nelward,Pop,Single,50
+11/7/2025 19:47:16,Luca,6,Dead Weight,Jack Stauber,Pop,HiLo,40
+11/7/2025 20:56:40,Lily,5,Sleeptalk,Dayseeker,Pop,Sleeptalk,190
+11/7/2025 20:59:49,Elias,8,free,rumi,Pop,Single,30
+11/7/2025 21:12:49,Elias,1,this is what heartbreak feels like,JVKE,Pop,Single,25
+11/7/2025 22:29:56,Alexander,2,Fine China,Chris Brown,Pop,X (Expanded Edition),25
+11/7/2025 23:17:10,Dylan,3,Call Me Maybe,Carly Rae Jepson,Pop,Single,500
+11/8/2025 0:22:53,Julian,4,Overwhelmed - (Ryan Mack Remix),Ryan Mack,Pop,Single,500
+11/8/2025 16:38:54,Daniel,4,Half A Man,Dean Lewis,Pop,A Place We Knew,200
+11/8/2025 16:40:34,Daniel,5,She Used To Be Mine,Sara Bareilles,Pop,Single,150
+11/8/2025 16:42:45,Daniel,6,Too Good At Goodbyes,Sam Smith,Pop,The Thrill Of It All,150
+11/8/2025 16:43:28,Daniel,7,Dancing on my own,Calum Scott,Pop,Only Human,150
+11/8/2025 16:45:39,Daniel,8,7 Years,Lukas Graham,Pop,Lukas Graham,100
+11/8/2025 16:47:00,Daniel,9,When We Were Young,Adele,Pop,25,500
+11/8/2025 16:47:58,Daniel,10,Slow It Down,Benson Boone,Pop,Fireworks & Rollerblades,200
+11/7/2025 22:31:03,Alexander,3,Confident,Justin Bieber,Pop,Journals,15
+11/3/2025 20:48:03,Sofia,8,Eternity,Alex Warren,Pop,"You'll Be Alright, Kid",50
+11/7/2025 19:10:35,Nora,5,Win Win,"Set It Off, Scene Queen",Pop,Single,20
+11/4/2025 12:53:20,Camila,10,THE WORLD IS ENDING,Lil Darkie,Pop,Single,300
+11/3/2025 15:32:10,Elijah,9,Reprise,Total Head,Pop,Wishing Well Demos,115
+11/3/2025 18:49:13,William,7,Fingerprints,Katy Perry,Pop,One of the Boys,50
+11/3/2025 20:48:45,Sofia,9,I Ain't Worried,OneRepublic,Pop,I Ain’t Worried (Music From The Motion Picture “Top Gun: Maverick”),50
+11/3/2025 21:12:14,Benjamin,3,Hooked on a feeling,Blue Swede,Pop,Hooked on a feeling,75
+11/3/2025 21:25:10,Benjamin,8,I want to break free,Queen,Pop,The works,65
+11/3/2025 21:27:29,Benjamin,10,Don't Stop Me Now,Queen,Pop,Jazz,55
+11/5/2025 18:10:04,Violet,10,We Don't Have To Dance,Andy Black,Pop,The Shadow Side,45
+11/7/2025 13:50:15,Ellie,10,Maps,Maroon 5,Pop,V,78
+11/7/2025 19:16:27,Nora,10,Making A Monster,The Hoosiers,Pop,Confidence,70
+11/3/2025 20:45:45,Sofia,5,The Door,Teddy Swims,Pop,I've Tried Everything But Therapy (Part 1),100
+11/5/2025 15:15:16,Luna,9,Praises,Elevation Rythm,Pop,This is the Gospel,58
+11/5/2025 10:59:32,Harper,4,Demons,Imagine Dragons,Pop,Night Visions,75
+11/5/2025 11:00:37,Harper,6,Good Life,OneRepublic,Pop,Waking Up,65
+11/5/2025 11:02:16,Harper,8,Paradise,Coldplay,Pop,Mylo Xyloto,45
+11/7/2025 11:22:53,Asher,9,Perfect Dreams,Cjbeards,Pop,Perfect Dreams,100
+11/7/2025 9:35:04,Hazel,5,The A team,Ed Sheeran,Pop,+,3
+11/6/2025 14:02:43,James,4,Hey Ya!,Outcast,Pop,Speakerboxxx/The Love Below,40
+11/3/2025 15:10:10,Henry,10,Lalala,"Y2K, bbno$",Pop,lalala,15
+11/3/2025 15:23:37,Henry,6,Two Princes,Spin Docters,Pop,Two Princes,24
+11/8/2025 0:01:23,Julian,10,Enemies,The Score,Pop,Enemies,100
+11/8/2025 0:02:12,Julian,9,Revolution,The Score,Pop,ATLAS,150
+11/3/2025 15:08:15,Noah,4,Bad Man,FIGHTMASTER,Pop,Bad Man,200
+11/3/2025 15:10:03,Noah,7,QUEEN OF THE NIGHT,The Vanished People,Pop,QUEEN OF THE NIGHT,300
+11/4/2025 18:01:47,Theodore,7,Let It Happen,Tame Impala,Pop,Currents,48
+11/6/2025 9:46:20,Elizabeth,1,Gooey,Glass animals,Pop,Zaba,40
+11/7/2025 8:24:38,Elizabeth,4,Eventually,Tame Impala,Pop,Currents,35
+11/3/2025 9:40:36,Liam,7,Tension,Diljit Dosanjh,Pop,Advisory (EP),150
+11/3/2025 9:42:47,Liam,9,White Brown Black,"Avvy Sra, Karan Aujla, Jaani",Pop,White Brown Black (Single),100
+11/3/2025 9:44:04,Liam,10,Jatt Da Muqabala,Sidhu Moose Wala,Pop,PBX 1,100
+11/3/2025 20:45:02,Sofia,4,Always Remember Us This Way,Lady Gaga,Pop,A Star Is Born Soundtrack,100
+11/3/2025 20:46:52,Sofia,6,Damn I Love Miami,"Pitbull, Lil Jon",Pop,Bad Boys For Life Soundtrack,80
+11/4/2025 18:08:44,Theodore,10,Eyes Without A Face,Billy Idol,Pop,Rebel Yell,19
+11/7/2025 23:11:19,Aria,2,Fireflies,Owl City,Pop,Ocean Eyes,84
+11/7/2025 22:29:26,Aria,7,My Way,Frank Sinatra,Pop,My Way,32
+11/7/2025 13:44:37,Ellie,2,Stay,Rihanna feat. Mikky Ekko,Pop,Unapologetic,45
+11/6/2025 15:03:14,Ethan,5,2010,Squid,Punk,Bright Green Field,26
+11/6/2025 12:31:53,Eliana,4,Banned From the Roxy,Crass,Punk,The Feeding of the Five Thousand (The Second Sitting),50
+11/7/2025 22:35:44,Alexander,7,Beautiful Girls,Sean Kingston,R&B,Beautiful Girls,10
+11/3/2025 15:10:45,Emma,7,Headlines,Drake,R&B,Single,75
+11/5/2025 11:04:11,Harper,9,Reasons,"Earth, Wind & Fire",R&B,That's the Way of the World,35
+11/6/2025 11:19:15,Michael,1,White Ferrari,Frank Ocean,R&B,Blonde,50
+11/6/2025 11:29:44,Michael,2,Pyramids,Frank Ocean,R&B,Channel ORANGE,40
+11/6/2025 11:38:09,Michael,3,Pink Matter,Frank Ocean,R&B,Channel ORANGE,35
+11/6/2025 11:44:26,Michael,4,Nights,Frank Ocean,R&B,Blonde,70
+11/6/2025 11:55:26,Michael,9,We Are The People,Empire Of The Sun,R&B,Walking On A Dream,30
+11/7/2025 22:32:32,Alexander,4,Miss Independant,Ne-Yo,R&B,Year Of The Gentleman,15
+11/6/2025 14:03:53,James,5,Pump It,The Black Eyed Peas,R&B,Monkey Business,50
+11/7/2025 22:33:20,Alexander,5,Passionfruit,Drake,R&B,More Life,20
+11/7/2025 22:28:41,Alexander,1,Best Part,Daniel Caesar,R&B,Freudian,25
+11/6/2025 4:29:03,Samuel,7,After the Storm,Kali Uchis; Tyler the Creator,R&B,Isolation,4
+11/6/2025 4:14:21,Samuel,1,Japanese Denim,Daniel Caesar,R&B,Get You - Single,5
+11/3/2025 9:33:55,Liam,2,So High,Sidhu Moose Wala,Rap,Single,210
+11/4/2025 12:54:30,Camila,9,Brain Damage,Eminem,Rap,The Slim Shady LP,300
+11/4/2025 13:00:46,Camila,4,Back in Blood,Pooh Shiesty,Rap,Shiesty Season,800
+11/5/2025 15:06:32,Luna,1,Motto,NF,Rap,HOPE,258
+11/5/2025 15:08:21,Luna,3,The Search,NF,Rap,The Search,114
+11/6/2025 11:52:18,Michael,8,Ghoul,Ken Carson,Rap,More Chaos,50
+11/7/2025 11:20:53,Asher,8,Pokemon Type Cypher Volume 4,Flint 4k,Rap,Single,100
+11/7/2025 19:37:54,Luca,1,lil' freak,bbno$,Rap,lil' freak,50
+11/7/2025 19:46:13,Luca,5,I See London I See France,bbno$,Rap,bag or die,40
+11/7/2025 19:52:25,Luca,10,hot topic,bbno$,Rap,Single,40
+11/6/2025 4:27:20,Samuel,6,Pride,Kendrick Lamar,Rap,Damn,1
+11/4/2025 13:05:38,Camila,1,DON'T TREAD ON ME,Lil Darkie,Rap,LIL DARKIE CLASSICS,1000
+11/7/2025 9:33:19,Hazel,3,Gin and Juice,SnoopDogg,Rap,DoggyStyle,2
+11/3/2025 15:17:18,Mateo,5,Greenbelt Station,Origami Angel,Rock,Origami Angel Broke Minecraft,122
+11/3/2025 16:29:06,Ava,5,Fake Plastic Trees,Radiohead,Rock,The Bends,50
+11/3/2025 16:39:26,Ava,8,Cemetry Gates,The Smiths,Rock,The Queen is Dead,100
+11/3/2025 16:40:21,Ava,9,Panic,The Smiths,Rock,Louder Than Bombs,200
+11/3/2025 15:07:01,Emma,2,Let Down,Radiohead,Rock,Single,200
+11/3/2025 15:07:53,Emma,3,Black,Pearl Jam,Rock,Single,100
+11/3/2025 15:08:36,Theodore,2,Let Down,Radiohead,Rock,OK Computer,46
+11/3/2025 15:13:07,Theodore,5,I Appear Missing,Queens of the Stone Age,Rock,...Like Clockwork,62
+11/3/2025 15:17:48,Elijah,3,High and Dry,Radiohead,Rock,The Bends,146
+11/4/2025 18:06:29,Theodore,9,Debaser,Pixies,Rock,Doolittle,29
+11/6/2025 11:46:43,Michael,5,Let Down,Radiohead,Rock,OK Computer,30
+11/6/2025 11:48:36,Michael,6,All I Need,Radiohead,Rock,In Rainbows,25
+11/7/2025 8:32:24,Elizabeth,6,Nobody's Listening,Linkin Park,Rock,Meteora,40
+11/7/2025 13:46:54,Ellie,5,Mr. Brightside,The Killers,Rock,Hot Fuss,60
+11/3/2025 21:26:20,Benjamin,9,We Will Rock You,Queen,Rock,News of the world,35
+11/6/2025 12:42:00,Eliana,9,I feel free,Cream,Rock,Fresh Cream,30
+11/6/2025 12:30:26,Eliana,3,"It's all over now, Baby Blue",Bob Dylan,Rock,Bringing it all back home,60
+11/3/2025 21:23:01,Benjamin,7,Another one bites the dust,Queen,Rock,The Game,100
+11/3/2025 16:36:00,Ava,6,Lullaby,The Cure,Rock,Disintegration,100
+11/7/2025 20:52:49,Lily,1,Song 3,Baby Metal & Slaughter to Prevail,Rock,METAL FORTH,300
+11/3/2025 15:07:12,Noah,2,Lover Lover,Jonny's Day Out,Rock,"Bear, Hello",350
+11/3/2025 15:14:58,Mateo,4,cold weather,glass beach,Rock,the first glass beach album,122
+11/3/2025 15:22:31,Isabella,4,Dark Dream (和声伴奏),希林娜依·高,Rock,Dark Dream (《诡秘之主小丑篇》动画片尾曲),100
+11/3/2025 15:31:03,Elijah,10,Back to The Old House,The Smiths,Rock,Louder Than Bombs,115
+11/3/2025 21:29:21,Benjamin,1,Knee Deep at ATP,Lovejoy,Rock,Knee Deep at ATP,150
+11/5/2025 15:12:36,Sebastian,3,Drifting,Good Kid,Rock,Good Kid 2,300
+11/5/2025 15:15:49,Jack,2,dark necessities,Red Hot Chili Peppers,Rock,The Getaway,30
+11/5/2025 17:49:31,Violet,2,Nostalgia,Mother Mother,Rock,Nostalgia,85
+11/5/2025 18:00:47,Violet,6,High Horse (Live),The Crane Wives,Rock,High Horse (Live),35
+11/6/2025 12:36:59,Eliana,5,Heavy Metal Drummer,Wilco,Rock,Yankee Hotel Foxtrot,80
+11/7/2025 19:08:39,Nora,4,Need You Here,I DONT KNOW HOW BUT THEY FOUND ME,Rock,Razzmatazz,30
+11/7/2025 19:15:04,Nora,9,Parlami (A Hundred Flowers),The Vanished People,Rock,Single,10
+11/6/2025 14:57:20,Ethan,1,953,black midi,Rock,Schlagenheim,41
+11/6/2025 15:01:45,Ethan,3,World's Fair,Stratford Rise,Rock,Single,32
+11/7/2025 21:18:58,Elias,3,so far so fake,pierce the veil,Rock,the jaws of life,30
+11/7/2025 21:06:11,Elias,6,sympathy,too close to touch,Rock,havent been myself,18
+11/6/2025 15:07:11,Ethan,8,Breadcrumb Trail,Slint,Rock,Spiderland,13
+11/6/2025 12:39:04,Eliana,7,Kaleidoscope,Procol Harum,Rock,Procol Harum,30
+11/3/2025 15:07:12,Theodore,1,Comfortably Numb,Pink Floyd,Rock,The Wall,82
+11/6/2025 12:27:32,Eliana,1,Wasn't born to follow,The Byrds,Rock,The Notorious Byrd Brothers,50
+11/6/2025 12:28:09,Eliana,2,Echoes,Pink Floyd,Rock,Meddle,40
+11/6/2025 12:38:02,Eliana,6,Lather,Jefferson Airplane,Rock,Crown of Creation,90
+11/3/2025 15:07:44,Noah,3,Scotty Doesn't Know,Lustra,Rock,Left for Dead,700
+11/3/2025 15:08:15,Amelia,2,Thunderstruck,ACDC,Rock,The Razors Edge,900
+11/3/2025 15:10:37,Theodore,3,Don't Dream It's Over,Crowded Housed,Rock,Crowded House,35
+11/3/2025 15:14:09,Isabella,2,Thunderstruck,AC/DC,Rock,The Razors Edge,500
+11/3/2025 15:15:53,Elijah,5,Wish You Were Here,Pink Floyd,Rock,Wish You Were Here,116
+11/3/2025 15:17:53,Henry,2,Brain Stew,Green Day,Rock,Insomniac,35
+11/3/2025 15:18:31,Amelia,8,Old Time Rock & Roll,Bob Segar,Rock,Stranger In Town,600
+11/3/2025 15:20:59,Amelia,9,Don't Stop Believin',Journey,Rock,Escape,600
+11/3/2025 15:22:13,Elijah,1,Have a Cigar,Pink Floyd,Rock,Wish You Were Her,219
+11/3/2025 15:23:06,Elijah,7,Money For Nothing,Dire Straits,Rock,Brothers in Arms,127
+11/3/2025 15:25:22,Elijah,2,Hey You,Pink Floyd,Rock,The Wall,207
+11/3/2025 15:27:31,Elijah,3,Bohemian Rhapsody,Queen,Rock,A Night at The Opera,192
+11/3/2025 15:32:52,Isabella,9,Crazy Train,Ozzy Osborne,Rock,Blizzard of Ozz,350
+11/3/2025 15:33:42,Henry,7,Slow Ride,Foghat,Rock,Slow Ride,22
+11/3/2025 15:56:20,Lucas,1,Separate Ways,Journey,Rock,Frontiers,70
+11/3/2025 15:57:03,Lucas,10,Hotel California,Eagles,Rock,Hotel California,55
+11/3/2025 15:58:19,Lucas,3,Sweet Emotion,Aerosmith,Rock,Toys in the Attic,60
+11/3/2025 15:59:07,Lucas,9,Holding Out for a Hero,Bonnie Tyler,Rock,Secret Dreams and Forbidden Fire,45
+11/3/2025 16:03:34,Lucas,8,Space Oddity,David Bowie,Rock,Space Oddity,40
+11/3/2025 18:59:05,William,9,American Girl,Tom Petty and the Heartbreakers,Rock,Tom Petty and the Heartbreakers,25
+11/3/2025 20:44:17,Sofia,3,No Good,Kaleo,Rock,A/B,200
+11/3/2025 21:10:26,Benjamin,2,Mr. Blue Sky,ELO,Rock,Out of the blue,50
+11/3/2025 21:13:56,Benjamin,4,Bohemian Rapsody,Queen,Rock,Bohemian Rapsody,100
+11/3/2025 21:16:10,Benjamin,5,Back in Black,ACDC,Rock,Back in Black,15
+11/4/2025 14:17:07,Levi,2,Thunder Road,Bruce Springsteen,Rock,Born To Run,500
+11/4/2025 14:18:22,Levi,3,Badlands,Bruce Springsteen,Rock,Darkness On The Edge Of Town,500
+11/4/2025 14:23:14,Levi,7,Gotta Be Somebody,Nickeback,Rock,Dark Horse,400
+11/4/2025 14:25:25,Levi,9,Seperate Ways (Worlds Apart),Journey,Rock,Frontiers,300
+11/5/2025 11:05:41,Harper,10,You Give Love a Bad Name,Bon Jovi,Rock,Slippery When Wet,30
+11/5/2025 15:03:44,Ezra,3,Floral and Fading,Pierce the Veil,Rock,Misadventures,77
+11/5/2025 15:04:34,Ezra,4,Emergency Contact,Pierce the Veil,Rock,The Jaws of Life,53
+11/5/2025 15:07:28,Luna,2,Everlong,Foo Fighters,Rock,The Color and the Shape,136
+11/5/2025 15:11:34,Luna,6,Burn it to the Ground,Nickelback,Rock,Dark Horse,88
+11/5/2025 15:14:28,Luna,8,How you remind me,Nickelback,Rock,silver side up,67
+11/5/2025 21:04:03,Aurora,4,Fake Plastic Trees,Radiohead,Rock,The Bends,500
+11/5/2025 21:04:48,Aurora,5,High and Dry,Radiohead,Rock,The Bends,500
+11/5/2025 21:08:40,Aurora,8,Ordinary World,Duran Duran,Rock,Duran Duran,500
+11/5/2025 21:12:39,Aurora,9,Brianstorm,Arctic Monkeys,Rock,Favourite Worst Nightmare,500
+11/5/2025 21:13:16,Aurora,10,No Surprises,Radiohead,Rock,Ok Computer,500
+11/6/2025 15:16:10,Mia,10,The Chain,Fleetwood Mac,Rock,Rumors,400
+11/7/2025 20:59:38,Lily,9,The Kill (Bury Me),Renascentia,Rock,The Kill (Bury Me) - Single,700
+11/7/2025 23:15:56,Dylan,1,Closer to the sun,Slightly Stoopid,Rock,Closer to the sun,200
+11/7/2025 23:22:43,Dylan,10,The Joker,Steve Miller Band,Rock,Single,300
+11/3/2025 15:30:07,Isabella,7,Afterlife,Evanescence,Rock,"Afterlife (From the Netflix Series ""Devil May Cry"")",200
+11/6/2025 4:13:27,Samuel,2,Something,The Beatles,Rock,Abbey Road,2
+11/4/2025 18:02:39,Theodore,8,Space Song,Beach House,Rock,Depression Cherry,32
+11/7/2025 20:54:47,Lily,3,Event Horizon (Ближе к тебе),Wildways,Rock,Anna,200
+11/7/2025 22:37:13,Alexander,9,Die With A Smile,"Lady Gaga, Bruno Mars",Rock,Die With A Smile,10
+11/3/2025 15:22:46,Amelia,10,The Rubberband Man,The Spinners,Soul,Happiness is Being with the Spinners,600
+11/3/2025 18:48:05,William,4,Reminds Me of You,Benson Boone,Soul,American Heart,45
+11/7/2025 13:14:34,Chloe,8,Fresh Erect (Kohta Takahashi Remix Instramental),Funkin' Sound Team & Kawai Sprite,Soundtrack,"Friday Night Funkin', Vol 3 Original game Soundtrack (Instrumentals)",49
+11/7/2025 13:40:43,Chloe,3,All Star Move: GUM,"SEGA, Richard Jacques",Soundtrack,"Sonic & All-Stars Racing Transformed (Original Soundtrack), Vol.2",73
+11/7/2025 16:45:05,Hudson,2,GUARDIAN,Toby Fox,Soundtrack,DELTARUNE Chapter 3+4,44
+11/7/2025 16:46:07,Hudson,3,The place where it rained,Toby Fox,Soundtrack,DELTARUNE Chapter 3+4 Soundtrack,20
+11/7/2025 16:56:29,Hudson,10,Skarrsinger Karmelita,Christopher Larkin,Soundtrack,Hollow Knight: Silksong,22
+11/7/2025 16:57:27,Hudson,9,Finale,Toby Fox,Soundtrack,UNDERTALE,110
+11/7/2025 13:32:01,Chloe,6,Soulwalker,Mittsies,Soundtrack,AWARIA Orignal Soundtrack -EP,54
+11/7/2025 13:09:02,Chloe,9,Dragon Road - Day,SEGA &b Kenichi Tokoi,Soundtrack,Planetary Pieces Vol 2,44
+11/3/2025 15:15:53,Isabella,3,117,Halo and Kazuma Jinnouchi,Soundtrack,Halo 4 OST,450
+11/3/2025 15:13:06,Isabella,1,Genesong,"Brian Lee White, Paul Lipson, Brian Trifon, Lennie Moore, Tom Salta, Halo, Steve Vai",Soundtrack,Halo 2 Anniversary,5000

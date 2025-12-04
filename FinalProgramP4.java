@@ -8,36 +8,198 @@
 * Michigan Technological University
 */
 import java.util.ArrayList;
-public class FinalProgramP4 {
+import java.util.HashMap;
+
+public class FinalProgramP4 extends AbstractClass {
+
+    public FinalProgramP4( ) {
+        setTrackDB( new ArrayList< TrackInfo >( ) );
+        setUsers( new ArrayList< String >( ) );
+        setTitles( new ArrayList< String >( ) );
+        setArtists( new ArrayList< String >( ) );
+        setAlbums( new ArrayList< String >( ) );
+        setGenres( new ArrayList< String >( ) );
+        setUserTrackMap( new HashMap( ) );
+        readInput( "responses.csv" );
+    }
     
-    //modified pythagorean theorem to find level of similarity between two songs
-    public double euclideanDistance( ArrayList< Double > array1, ArrayList< Double > array2 ) {
-        double sum = 0.0;
-        for( int i = 0; i < array1.size( ); i++ ) {
-            sum += Math.pow( ( array1.get( i ) - array2.get( i ) ), 2.0 );
+    /**
+    * Uses the distance methods to calculate the similarity between two
+    * users with respect to a particular data field.
+    *
+    * @param user1
+    * @param user2
+    * @param fieldName - USER, RANK, TITLE, ARTIST, ALBUM, GENRE, PLAYS
+    * @param method - Euclidean, PEARSON
+    * @return
+    */
+    double calculateSimilarity( String user1, String user2, String
+    fieldName, String method ) {
+        ArrayList< TrackInfo > user1List = getUserTrackMap( ).get( user1 );
+        ArrayList< TrackInfo > user2List = getUserTrackMap( ).get( user2 );
+
+        System.out.println(user1List.get(0));
+
+
+        ArrayList< String > fieldList;
+        switch ( fieldName ) {
+            case "USER":
+                fieldList = getUsers( );
+                break;
+            case "RANK":
+                System.out.println("no idea what to do here yet.");
+                return -1;
+            case "TITLE":
+                fieldList = getTitles( );
+                break;
+            case "ARTIST":
+                fieldList = getArtists( );
+                break;
+            case "ALBUM":
+                fieldList = getAlbums( );
+                break;
+            case "GENRE":
+                fieldList = getGenres( );
+                break;
+            case "PLAYS":
+                System.out.println("Also no idea what to do here rn");
+                return -1;
+
+            default:
+                return -1;
         }
-        return 1.0 / ( 1.0 + Math.sqrt( sum ) );
+
+        ArrayList< Double > user1Scores = new ArrayList< Double >( fieldList.size( ) );
+        ArrayList< Double > user2Scores = new ArrayList< Double >( fieldList.size( ) );
+        for ( TrackInfo track : user1List ) {
+            for ( int i = 0; i < fieldList.size( ); i++ ) {
+                if ( user1Scores.size( ) < i + 1 ) {
+                    user1Scores.add( 0.0 );
+                }
+                String fieldValue = fieldList.get( i );
+                switch ( fieldName ) {
+                    case "USER":
+                        if ( fieldValue == track.getUser( ) ) {
+                            user1Scores.set( i, user1Scores.get( i ) + 1 );
+                        }
+                        break;
+                    case "RANK":
+                        System.out.println("no idea what to do here yet.");
+                        break;
+                    case "TITLE":
+                        if ( fieldValue == track.getTitle( ) ) {
+                            user1Scores.set( i, user1Scores.get( i ) + 1 );
+                        }
+                        break;
+                    case "ARTIST":
+                        if ( fieldValue == track.getArtist( ) ) {
+                            user1Scores.set( i, user1Scores.get( i ) + 1 );
+                        }
+                        break;
+                    case "ALBUM":
+                        if ( fieldValue == track.getAlbum( ) ) {
+                            user1Scores.set( i, user1Scores.get( i ) + 1 );
+                        }
+                        break;
+                    case "GENRE":
+                        if ( fieldValue == track.getGenre( ) ) {
+                            user1Scores.set( i, user1Scores.get( i ) + 1 );
+                        }
+                        break;
+                    case "PLAYS":
+                        System.out.println("Also no idea what to do here rn");
+                        break;
+                
+                    default:
+                        break;
+                }
+            }
+        }
+
+        for ( TrackInfo track : user2List ) {
+            for ( int i = 0; i < fieldList.size( ); i++ ) {
+                String fieldValue = fieldList.get( i );
+                if ( user2Scores.size( ) < i + 1 ) {
+                    user2Scores.add( 0.0 );
+                }
+                switch ( fieldName ) {
+                    case "USER":
+                        if ( fieldValue == track.getUser( ) ) {
+                            user2Scores.set( i, user2Scores.get( i ) + 1 );
+                        }
+                        break;
+                    case "RANK":
+                        System.out.println("no idea what to do here yet.");
+                        break;
+                    case "TITLE":
+                        if ( fieldValue == track.getTitle( ) ) {
+                            user2Scores.set( i, user2Scores.get( i ) + 1 );
+                        }
+                        break;
+                    case "ARTIST":
+                        if ( fieldValue == track.getArtist( ) ) {
+                            user2Scores.set( i, user2Scores.get( i ) + 1 );
+                        }
+                        break;
+                    case "ALBUM":
+                        if ( fieldValue == track.getAlbum( ) ) {
+                            user2Scores.set( i, user2Scores.get( i ) + 1 );
+                        }
+                        break;
+                    case "GENRE":
+                        if ( fieldValue == track.getGenre( ) ) {
+                            user2Scores.set( i, user2Scores.get( i ) + 1 );
+                        }
+                        break;
+                    case "PLAYS":
+                        System.out.println("Also no idea what to do here rn");
+                        break;
+                
+                    default:
+                        break;
+                }
+            }
+        }
+
+        if ( method == "Euclidean" ) {
+            return euclideanDistance( user1Scores, user2Scores );
+        } else if ( method == "PEARSON" ) {
+            return pearsonDistance( user1Scores, user2Scores );
+        } else {
+            return -1;
+        }
+    }
+    /**
+    * Calculate the similarity scores between the specified user and every
+    * other user.
+    *
+    * @param user
+    * @param fieldName - USER, RANK, TITLE, ARTIST, ALBUM, GENRE, PLAYS
+    * @param method - Euclidean, PEARSON
+    * @return
+    */
+    HashMap< String, Double > calculateAllSimilarity( String user, String fieldName, String method ) {
+        return null;
+    }
+    /**
+    * Make a playlist for the specified user comprised of a specified
+    * number of music tracks from the most similar users.
+    *
+    * @param user
+    * @param fieldName - USER, RANK, TITLE, ARTIST, ALBUM, GENRE, PLAYS
+    * @param method - Euclidean, PEARSON
+    * @param numberOfTracks
+    * @return
+    */
+    ArrayList< TrackInfo > makePlaylist( String user, String fieldName,
+    String method, int numberOfTracks ) {
+        return null;
     }
 
-    //get average value across two songs, then get standard deviation across the songs
-    //return... something... I don't really understand this formula
-    public double pearsonDistance( ArrayList< Double > array1, ArrayList< Double > array2 ) {
-        double mean1 = 0.0, mean2 = 0.0;
-        for( int i = 0; i < array1.size( ); i++ ) {
-            mean1 += array1.get( i );
-            mean2 += array2.get( i );
-        }   
-        mean1 /= array1.size( );
-        mean2 /= array2.size( );
-        double sumXY = 0.0, sumX2 = 0.0, sumY2 = 0.0;
-        for( int i = 0; i < array1.size( ); i++ ) {
-            sumXY += ( ( array1.get( i ) - mean1 ) * ( array2.get( i ) - mean2 ) );
-            sumX2 += Math.pow( array1.get( i ) - mean1, 2.0 );
-            sumY2 += Math.pow( array2.get( i ) - mean2, 2.0 );
-        }
-        return ( 1.0 + ( sumXY / ( Math.sqrt( sumX2 ) * Math.sqrt( sumY2 ) ) ) ) / 2.0;
+    public static void main(String[] args) {
+        FinalProgramP4 program = new FinalProgramP4( );
+        System.out.println( program.calculateSimilarity( "LUCA", "LUCA", "GENRE", "Euclidean" ) );
     }
-
 
     /*
     * Problem 0: Initialize Data

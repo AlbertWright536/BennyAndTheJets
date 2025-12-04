@@ -181,14 +181,14 @@ public abstract class AbstractClass {
             Scanner fileScan = new Scanner( file );
             fileScan.nextLine( );
             while( fileScan.hasNext( ) ) {
-                String[ ] fields = fileScan.nextLine( ).split( ", " );
-                String user = fields[ 0 ].trim( ).toUpperCase( );
-                Integer rank = Integer.valueOf( fields[ 1 ].trim( ) );
-                String title = fields[ 2 ].trim( ).toUpperCase( );
-                String artist = fields[ 3 ].trim( ).toUpperCase( );
-                String album = fields[ 4 ].trim( ).toUpperCase( );
+                String[ ] fields = fileScan.nextLine( ).split( ",(?!\s)" );
+                String user = fields[ 1 ].trim( ).toUpperCase( );
+                Integer rank = Integer.valueOf( fields[ 2 ].trim( ) );
+                String title = fields[ 3 ].trim( ).toUpperCase( );
+                String artist = fields[ 4 ].trim( ).toUpperCase( );
+                String album = fields[ 6 ].trim( ).toUpperCase( );
                 String genre = fields[ 5 ].trim( ).toUpperCase( );
-                Integer plays = Integer.valueOf( fields[ 6 ].trim( ) );
+                Integer plays = Integer.valueOf( fields[ 7 ].trim( ) );
                 TrackInfo track = new TrackInfo( user, title, artist, album, genre, rank, plays );
                 trackDB.add( track );
                 addIfNotExists( users, user );
