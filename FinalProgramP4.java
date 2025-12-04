@@ -175,16 +175,30 @@ public class FinalProgramP4 extends AbstractClass {
     String method, int numberOfTracks ) {
         return null;
     }
-
-    public static void main(String[] args) {
-        FinalProgramP4 program = new FinalProgramP4( );
-        HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "LUCA", "GENRE", "Euclidean" );
+    ArrayList< String > similarPeople(String user, String fieldName, String method, double filter) { 
+        HashMap< String, Double > testScores = calculateAllSimilarity( user, fieldName, method );        
+        ArrayList <String> names = new ArrayList<>();
         
-        for (String user : program.getUsers( ) ) {
-            if ( user.equals( "LUCA" ) ) {
+        for (String ComparedUser : getUsers( ) ) {
+            if ( ComparedUser.equals( user ) ) {
                 continue;
             }
-            System.out.println( user + ": " + lucaScores.get( user ) );
+            if ( testScores.get(ComparedUser) >= filter) {
+                names.add(ComparedUser);
+            }
+            //System.out.println( user + ": " + testScores.get( user ) );
+        }
+
+        return names;
+
+    }
+    public static void main(String[] args) {
+        FinalProgramP4 program = new FinalProgramP4( );
+        //Euclidean or PEARSON
+        //HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "LUCAS", "GENRE", "Euclidean" );
+        ArrayList <String> test = program.similarPeople("LUCA", "GENRE", "Euclidean", 0.55);
+        for (int i = 0 ; i < test.size() ; i++) {
+            System.out.println(test.get(i));
         }
     }
 
