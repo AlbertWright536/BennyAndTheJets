@@ -38,9 +38,6 @@ public class FinalProgramP4 extends AbstractClass {
         ArrayList< TrackInfo > user1List = getUserTrackMap( ).get( user1 );
         ArrayList< TrackInfo > user2List = getUserTrackMap( ).get( user2 );
 
-        System.out.println(user1List.get(0));
-
-
         ArrayList< String > fieldList;
         switch ( fieldName ) {
             case "USER":
@@ -154,7 +151,15 @@ public class FinalProgramP4 extends AbstractClass {
     * @return
     */
     HashMap< String, Double > calculateAllSimilarity( String user, String fieldName, String method ) {
-        return null;
+        HashMap< String, Double > scores = new HashMap( );
+        for( String comparedUser : getUsers( ) ) {
+            if ( comparedUser.equals( user ) ) {
+                continue;
+            } else {
+                scores.put( comparedUser, calculateSimilarity( user, comparedUser, fieldName, method ) );
+            }
+        }
+        return scores;
     }
     /**
     * Make a playlist for the specified user comprised of a specified
@@ -173,7 +178,14 @@ public class FinalProgramP4 extends AbstractClass {
 
     public static void main(String[] args) {
         FinalProgramP4 program = new FinalProgramP4( );
-        System.out.println( program.calculateSimilarity( "LUCA", "LUCA", "GENRE", "Euclidean" ) );
+        HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "ELIJAH", "ARTIST", "Euclidean" );
+        
+        for (String user : program.getUsers( ) ) {
+            if ( user.equals( "ELIJAH" ) ) {
+                continue;
+            }
+            System.out.println( user + ": " + lucaScores.get( user ) );
+        }
     }
 
     /*
