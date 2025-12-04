@@ -175,7 +175,7 @@ public class FinalProgramP4 extends AbstractClass {
     String method, int numberOfTracks ) {
         return null;
     }
-    ArrayList< String > similarPeople(String user, String fieldName, String method, double filter) { 
+    ArrayList< String > similarPeople(String user, String fieldName, String method, double filterThreshold) { 
         HashMap< String, Double > testScores = calculateAllSimilarity( user, fieldName, method );        
         ArrayList <String> names = new ArrayList<>();
         
@@ -183,20 +183,24 @@ public class FinalProgramP4 extends AbstractClass {
             if ( ComparedUser.equals( user ) ) {
                 continue;
             }
-            if ( testScores.get(ComparedUser) >= filter) {
+            if ( testScores.get(ComparedUser) >= filterThreshold) {
                 names.add(ComparedUser);
             }
             //System.out.println( user + ": " + testScores.get( user ) );
         }
-
         return names;
+
+    }
+
+    ArrayList < String > songReccomendations (String user, String fieldName, String method, double filterThreshold) {
+        similarPeople(user, fieldName, method, filterThreshold);
 
     }
     public static void main(String[] args) {
         FinalProgramP4 program = new FinalProgramP4( );
         //Euclidean or PEARSON
         //HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "LUCAS", "GENRE", "Euclidean" );
-        ArrayList <String> test = program.similarPeople("LUCA", "GENRE", "Euclidean", 0.55);
+        ArrayList <String> test = program.similarPeople("LUCA", "GENRE", "Euclidean", 0.50);
         for (int i = 0 ; i < test.size() ; i++) {
             System.out.println(test.get(i));
         }
