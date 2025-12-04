@@ -44,11 +44,9 @@ public class FinalProgramP4 extends AbstractClass {
         ArrayList< String > fieldList;
         switch ( fieldName ) {
             case "USER":
-                fieldList = getUsers( );
-                break;
+                return -1; // Useless output, would always produce 1 or 0. Return error -1
             case "RANK":
-                System.out.println("no idea what to do here yet.");
-                return -1;
+                return -1; // Not useful, return -1
             case "TITLE":
                 fieldList = getTitles( );
                 break;
@@ -62,11 +60,10 @@ public class FinalProgramP4 extends AbstractClass {
                 fieldList = getGenres( );
                 break;
             case "PLAYS":
-                System.out.println("Also no idea what to do here rn");
                 return -1;
 
             default:
-                return -1;
+                return -1; // Error, return -1
         }
 
         ArrayList< Double > user1Scores = new ArrayList< Double >( fieldList.size( ) );
@@ -78,14 +75,6 @@ public class FinalProgramP4 extends AbstractClass {
                 }
                 String fieldValue = fieldList.get( i );
                 switch ( fieldName ) {
-                    case "USER":
-                        if ( fieldValue == track.getUser( ) ) {
-                            user1Scores.set( i, user1Scores.get( i ) + 1 );
-                        }
-                        break;
-                    case "RANK":
-                        System.out.println("no idea what to do here yet.");
-                        break;
                     case "TITLE":
                         if ( fieldValue == track.getTitle( ) ) {
                             user1Scores.set( i, user1Scores.get( i ) + 1 );
@@ -105,9 +94,6 @@ public class FinalProgramP4 extends AbstractClass {
                         if ( fieldValue == track.getGenre( ) ) {
                             user1Scores.set( i, user1Scores.get( i ) + 1 );
                         }
-                        break;
-                    case "PLAYS":
-                        System.out.println("Also no idea what to do here rn");
                         break;
                 
                     default:
@@ -123,14 +109,6 @@ public class FinalProgramP4 extends AbstractClass {
                     user2Scores.add( 0.0 );
                 }
                 switch ( fieldName ) {
-                    case "USER":
-                        if ( fieldValue == track.getUser( ) ) {
-                            user2Scores.set( i, user2Scores.get( i ) + 1 );
-                        }
-                        break;
-                    case "RANK":
-                        System.out.println("no idea what to do here yet.");
-                        break;
                     case "TITLE":
                         if ( fieldValue == track.getTitle( ) ) {
                             user2Scores.set( i, user2Scores.get( i ) + 1 );
@@ -150,9 +128,6 @@ public class FinalProgramP4 extends AbstractClass {
                         if ( fieldValue == track.getGenre( ) ) {
                             user2Scores.set( i, user2Scores.get( i ) + 1 );
                         }
-                        break;
-                    case "PLAYS":
-                        System.out.println("Also no idea what to do here rn");
                         break;
                 
                     default:
