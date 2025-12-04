@@ -137,9 +137,15 @@ public class FinalProgramP4 extends AbstractClass {
             return euclideanDistance( user1Scores, user2Scores );
         } else if ( method == "PEARSON" ) {
             return pearsonDistance( user1Scores, user2Scores );
+        } else if (method == "") {
+            return jaccardSimiliarity(user1Scores, user2Scores);
         } else {
             return -1;
         }
+    }
+    private double jaccardSimiliarity( ArrayList< Double > array1, ArrayList< Double >array2 ) {
+        
+        return 0.0;
     }
     /**
     * Calculate the similarity scores between the specified user and every
@@ -193,14 +199,30 @@ public class FinalProgramP4 extends AbstractClass {
     }
 
     ArrayList < String > songReccomendations (String user, String fieldName, String method, double filterThreshold) {
-        similarPeople(user, fieldName, method, filterThreshold);
+        ArrayList < String > names = similarPeople(user, fieldName, method, filterThreshold);
+        ArrayList < String > songs = new ArrayList<>();
+        
+        //iterate throug the people on the list
+        for (int i = 0 ; i < names.size() ; i++ ) {
+            
+            //iterate through the songs of individuals
+
+            for (int j = 0 ; j < getUserTrackMap().get(names.get(i)).size(); j++ ) {
+
+
+                //Add the song of the person who's name is on the list
+                songs.add(getUserTrackMap().get(names.get(i)).get(j).getTitle());
+            }
+        }
+        
+        return songs;
 
     }
     public static void main(String[] args) {
         FinalProgramP4 program = new FinalProgramP4( );
         //Euclidean or PEARSON
         //HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "LUCAS", "GENRE", "Euclidean" );
-        ArrayList <String> test = program.similarPeople("LUCA", "GENRE", "Euclidean", 0.50);
+        ArrayList <String> test = program.songReccomendations("LUCA", "GENRE", "Euclidean", 0.50);
         for (int i = 0 ; i < test.size() ; i++) {
             System.out.println(test.get(i));
         }
