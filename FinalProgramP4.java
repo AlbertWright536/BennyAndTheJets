@@ -37,6 +37,59 @@ public class FinalProgramP4 extends AbstractClass {
     fieldName, String method ) {
         ArrayList< TrackInfo > user1List = getUserTrackMap( ).get( user1 );
         ArrayList< TrackInfo > user2List = getUserTrackMap( ).get( user2 );
+        if ( method.equals( "JACCARD" ) ) {
+            ArrayList< String > user1FieldList = new ArrayList();
+            ArrayList< String > user2FieldList = new ArrayList();
+            for ( TrackInfo track : user1List ) {
+                String trackField = null;
+                switch ( fieldName ) {
+                    case "TITLE":
+                        trackField = track.getTitle( );
+                        break;
+                    case "ARTIST":
+                        trackField = track.getArtist( );
+                        break;
+                    case "ALBUM":
+                        trackField = track.getAlbum( );
+                        break;
+                    case "GENRE":
+                        trackField = track.getGenre( );
+                        break;
+
+                    default:
+                        return -1;
+                }
+                if ( !user1FieldList.contains( trackField ) ) {
+                    user1FieldList.add( trackField );
+                }
+            }
+
+            for ( TrackInfo track : user2List ) {
+                String trackField = null;
+                switch ( fieldName ) {
+                    case "TITLE":
+                        trackField = track.getTitle( );
+                        break;
+                    case "ARTIST":
+                        trackField = track.getArtist( );
+                        break;
+                    case "ALBUM":
+                        trackField = track.getAlbum( );
+                        break;
+                    case "GENRE":
+                        trackField = track.getGenre( );
+                        break;
+
+                    default:
+                        return -1;
+                }
+                if ( !user2FieldList.contains( trackField ) ) {
+                    user2FieldList.add( trackField );
+                }
+            }
+
+            return jaccardSimiliarity( user1FieldList, user2FieldList );
+        }
 
         ArrayList< String > fieldList;
         switch ( fieldName ) {
@@ -137,15 +190,24 @@ public class FinalProgramP4 extends AbstractClass {
             return euclideanDistance( user1Scores, user2Scores );
         } else if ( method == "PEARSON" ) {
             return pearsonDistance( user1Scores, user2Scores );
-        } else if (method == "") {
-            return jaccardSimiliarity(user1Scores, user2Scores);
         } else {
             return -1;
         }
     }
-    private double jaccardSimiliarity( ArrayList< Double > array1, ArrayList< Double >array2 ) {
+    private double jaccardSimiliarity( ArrayList< String > array1, ArrayList< String >array2 ) {
+        ArrayList< String > unionArray = (ArrayList< String >) array1.clone( );
+        for (String element : array2) {
+            if ( !unionArray.contains( element ) ) {
+                unionArray.add( element );
+            }
+        }
+
+        array1.retainAll( array2 );
+        int overlapSize = array1.size( );
+        int unionSize = unionArray.size( );
+        double jaccard = (double) overlapSize / (double) unionSize;
         
-        return 0.0;
+        return jaccard;
     }
     /**
     * Calculate the similarity scores between the specified user and every
@@ -161,9 +223,8 @@ public class FinalProgramP4 extends AbstractClass {
         for( String comparedUser : getUsers( ) ) {
             if ( comparedUser.equals( user ) ) {
                 continue;
-            } else {
-                scores.put( comparedUser, calculateSimilarity( user, comparedUser, fieldName, method ) );
             }
+            scores.put( comparedUser, calculateSimilarity( user, comparedUser, fieldName, method ) );
         }
         return scores;
     }
@@ -221,11 +282,14 @@ public class FinalProgramP4 extends AbstractClass {
     public static void main(String[] args) {
         FinalProgramP4 program = new FinalProgramP4( );
         //Euclidean or PEARSON
-        //HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "LUCAS", "GENRE", "Euclidean" );
-        ArrayList <String> test = program.songReccomendations("LUCA", "GENRE", "Euclidean", 0.50);
-        for (int i = 0 ; i < test.size() ; i++) {
-            System.out.println(test.get(i));
+        HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "LUCA", "GENRE", "JACCARD" );
+        for (String user : program.getUsers( ) ) {
+            System.out.println(user + ": " + lucaScores.get(user));
         }
+        // ArrayList <String> test = program.songReccomendations("LUCA", "GENRE", "Euclidean", 0.50);
+        // for (int i = 0 ; i < test.size() ; i++) {
+        //     System.out.println(test.get(i));
+        // }
     }
 
     /*
