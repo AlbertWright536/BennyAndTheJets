@@ -298,17 +298,41 @@ public class FinalProgramP4 extends AbstractClass {
         
         return songs;
     }
+    public void printSongs (String user, String fieldName, String method, double filterThreshold) {
+        ArrayList <String> reccommendedSongList = songReccomendations(user, fieldName, method, filterThreshold);
+        System.out.println("");
+        System.out.println("---------- THIS IS THE SONG RECCOMENDATIONS BASED ON THE USER: " + user + " ----------");
+        System.out.println("");
+        for (int i = 0 ; i < reccommendedSongList.size() ; i++) {
+            System.out.println(reccommendedSongList.get(i));
+        }
+        System.out.println("");
+    }
 
     public static void main(String[] args) {
         FinalProgramP4 program = new FinalProgramP4( );
-        HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "LUCA", "GENRE", "JACCARD" );
+        /*HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "LUCA", "GENRE", "JACCARD" );
         for (String user : program.getUsers( ) ) {
             System.out.println(user + ": " + lucaScores.get(user));
+        } */
+        program.printSongs("LUCA", "GENRE", "JACCARD", 0.30);
+        program.printSongs("LUCAS", "ARTIST", "Euclidean", .25);
+        program.printSongs("CHARLOTTE", "GENRE", "PEARSON", 0.40);
+        
+        /*ArrayList <String> test1 = program.songReccomendations("LUCA", "GENRE", "JACCARD", 0.30);
+        for (int i = 0 ; i < test1.size() ; i++) {
+            System.out.println(test1.get(i));
         }
-        ArrayList <String> test = program.songReccomendations("LUCA", "GENRE", "JACCARD", 0.30);
-        for (int i = 0 ; i < test.size() ; i++) {
-            System.out.println(test.get(i));
+        
+        ArrayList <String> test2 = program.songReccomendations("LUCAS", "GENRE", "JACCARD", 0.30);
+        for (int i = 0 ; i < test2.size() ; i++) {
+            System.out.println(test2.get(i));
         }
+
+        ArrayList <String> test3 = program.songReccomendations("CHARLOTTE", "GENRE", "JACCARD", 0.30);
+        for (int i = 0 ; i < test3.size() ; i++) {
+            System.out.println(test3.get(i));
+        } */
     }
 
     /*
