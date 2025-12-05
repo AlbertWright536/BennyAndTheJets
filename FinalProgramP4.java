@@ -242,37 +242,42 @@ public class FinalProgramP4 extends AbstractClass {
     String method, int numberOfTracks ) {
         return null;
     }
-    ArrayList< String > similarPeople(String user, String fieldName, String method, double filterThreshold) { 
+
+    ArrayList< KeyValuePair< String, Double > > similarPeople(String user, String fieldName, String method, double filterThreshold) { 
         HashMap< String, Double > testScores = calculateAllSimilarity( user, fieldName, method );        
-        ArrayList <String> names = new ArrayList<>();
+        ArrayList< KeyValuePair< String, Double > > testScorePairs = new ArrayList<>();
+
+        // ArrayList <String> names = new ArrayList<>();
         
         for (String ComparedUser : getUsers( ) ) {
             if ( ComparedUser.equals( user ) ) {
                 continue;
             }
             if ( testScores.get(ComparedUser) >= filterThreshold) {
-                names.add(ComparedUser);
+                testScorePairs.add( new KeyValuePair<>( ComparedUser, testScores.get( ComparedUser) ) );
             }
             //System.out.println( user + ": " + testScores.get( user ) );
         }
-        return names;
+        return testScorePairs;
 
     }
 
     ArrayList < String > songReccomendations (String user, String fieldName, String method, double filterThreshold) {
-        ArrayList < String > names = similarPeople(user, fieldName, method, filterThreshold);
+        ArrayList < KeyValuePair< String, Double > > names = similarPeople(user, fieldName, method, filterThreshold);
         ArrayList < String > songs = new ArrayList<>();
+
+        names.sort( (a, b) -> { return -1 * a.getValue( ).compareTo( b.getValue( ) ); } );
         
         //iterate throug the people on the list
-        for (int i = 0 ; i < names.size() ; i++ ) {
+        for ( KeyValuePair< String, Double > namePair : names ) {
             
             //iterate through the songs of individuals
 
-            for (int j = 0 ; j < getUserTrackMap().get(names.get(i)).size(); j++ ) {
+            for (int j = 0 ; j < getUserTrackMap().get(namePair.getKey( )).size(); j++ ) {
 
 
                 //Add the song of the person who's name is on the list
-                songs.add(getUserTrackMap().get(names.get(i)).get(j).getTitle());
+                songs.add(getUserTrackMap().get(namePair.getKey( )).get(j).getTitle());
             }
         }
         
@@ -286,10 +291,10 @@ public class FinalProgramP4 extends AbstractClass {
         for (String user : program.getUsers( ) ) {
             System.out.println(user + ": " + lucaScores.get(user));
         }
-        // ArrayList <String> test = program.songReccomendations("LUCA", "GENRE", "Euclidean", 0.50);
-        // for (int i = 0 ; i < test.size() ; i++) {
-        //     System.out.println(test.get(i));
-        // }
+        ArrayList <String> test = program.songReccomendations("LUCA", "GENRE", "JACCARD", 0.30);
+        for (int i = 0 ; i < test.size() ; i++) {
+            System.out.println(test.get(i));
+        }
     }
 
     /*
