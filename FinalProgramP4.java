@@ -203,8 +203,9 @@ public class FinalProgramP4 extends AbstractClass {
             }
         }
 
-        array1.retainAll( array2 );
-        int overlapSize = array1.size( );
+        ArrayList< String > overlapArray = (ArrayList< String >) array1.clone();
+        overlapArray.retainAll( array2 );
+        int overlapSize = overlapArray.size( );
         int unionSize = unionArray.size( );
         double jaccard = (double) overlapSize / (double) unionSize;
         
@@ -319,6 +320,8 @@ public class FinalProgramP4 extends AbstractClass {
         program.printSongs("LUCAS", "ARTIST", "Euclidean", .25);
         program.printSongs("CHARLOTTE", "GENRE", "PEARSON", 0.40);
         
+        program.jaccardTest( );
+        
         /*ArrayList <String> test1 = program.songReccomendations("LUCA", "GENRE", "JACCARD", 0.30);
         for (int i = 0 ; i < test1.size() ; i++) {
             System.out.println(test1.get(i));
@@ -333,6 +336,69 @@ public class FinalProgramP4 extends AbstractClass {
         for (int i = 0 ; i < test3.size() ; i++) {
             System.out.println(test3.get(i));
         } */
+    }
+
+    void jaccardTest( ) {
+        // All of these should return 1, as they are against the same data
+        double test1 = calculateSimilarity( "LUCA", "LUCA", "GENRE", "JACCARD" );
+        if ( test1 == 1.0 ) {
+            System.out.println( "Jaccard Test 1 Passed!" );
+        } else {
+            System.out.println( "Jaccard Test 1 Failed..." );
+        }
+
+        double test2 = calculateSimilarity( "LUCA", "LUCA", "ARTIST", "JACCARD" );
+        if ( test2 == 1.0 ) {
+            System.out.println( "Jaccard Test 2 Passed!" );
+        } else {
+            System.out.println( "Jaccard Test 2 Failed..." );
+        }
+
+        double test3 = calculateSimilarity( "LUCA", "LUCA", "TITLE", "JACCARD" );
+        if ( test3 == 1.0 ) {
+            System.out.println( "Jaccard Test 3 Passed!" );
+        } else {
+            System.out.println( "Jaccard Test 3 Failed..." );
+        }
+
+        double test4 = calculateSimilarity( "LUCA", "LUCA", "ALBUM", "JACCARD" );
+        if ( test4 == 1.0 ) {
+            System.out.println( "Jaccard Test 4 Passed!" );
+        } else {
+            System.out.println( "Jaccard Test 4 Failed..." );
+        }
+
+        // Test core function with my own data
+        ArrayList< String > testSet1 = new ArrayList<>( );
+        testSet1.add( "apple" );
+        testSet1.add( "banana" );
+        testSet1.add( "pear" );
+
+        ArrayList< String > testSet2 = new ArrayList<>( );
+        testSet2.add( "mango" );
+        testSet2.add( "orange" );
+        testSet2.add( "cranberry" );
+
+        double test5 = jaccardSimiliarity( testSet1, testSet2 );
+        if ( test5 == 0.0 ) {
+            System.out.println( "Jaccard Test 5 Passed!" );
+        } else {
+            System.out.println( "Jaccard Test 5 Failed..." );
+        }
+
+        ArrayList< String > testSet3 = new ArrayList<>( );
+        testSet3.add( "mango" );
+        testSet3.add( "apple" );
+        testSet3.add( "cranberry" );
+
+        double test6 = jaccardSimiliarity( testSet1, testSet3 );
+        // Should return 0.2 as there is 1 shared element and 5 unique elemnts total.
+        // 1/5 = 0.2
+        if ( test6 == 0.2 ) {
+            System.out.println( "Jaccard Test 6 Passed!" );
+        } else {
+            System.out.println( "Jaccard Test 6 Failed..." );
+        }
     }
 
     /*
