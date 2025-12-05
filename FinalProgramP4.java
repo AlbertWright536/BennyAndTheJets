@@ -194,6 +194,7 @@ public class FinalProgramP4 extends AbstractClass {
             return -1;
         }
     }
+
     private double jaccardSimiliarity( ArrayList< String > array1, ArrayList< String >array2 ) {
         ArrayList< String > unionArray = (ArrayList< String >) array1.clone( );
         for (String element : array2) {
@@ -209,6 +210,7 @@ public class FinalProgramP4 extends AbstractClass {
         
         return jaccard;
     }
+
     /**
     * Calculate the similarity scores between the specified user and every
     * other user.
@@ -243,50 +245,62 @@ public class FinalProgramP4 extends AbstractClass {
         return null;
     }
 
+    /**
+     * Gets a list of people with similar music tastes, based on similarity score.
+     * @param user
+     * @param fieldName - TITLE, ARTIST, ALBUM, GENRE
+     * @param method - Euclidian, PEARSON, JACCARD
+     * @param filterThreshold
+     * @return
+     */
     ArrayList< KeyValuePair< String, Double > > similarPeople(String user, String fieldName, String method, double filterThreshold) { 
+        // Get test score hashmap, to be converted to an ArrayList for sorting
         HashMap< String, Double > testScores = calculateAllSimilarity( user, fieldName, method );        
-        ArrayList< KeyValuePair< String, Double > > testScorePairs = new ArrayList<>();
-
-        // ArrayList <String> names = new ArrayList<>();
+        ArrayList< KeyValuePair< String, Double > > testScorePairs = new ArrayList<>( );
         
-        for (String ComparedUser : getUsers( ) ) {
-            if ( ComparedUser.equals( user ) ) {
+        for (String comparedUser : getUsers( ) ) {
+            if ( comparedUser.equals( user ) ) {
                 continue;
             }
-            if ( testScores.get(ComparedUser) >= filterThreshold) {
-                testScorePairs.add( new KeyValuePair<>( ComparedUser, testScores.get( ComparedUser) ) );
+            if ( testScores.get(comparedUser) >= filterThreshold) {
+                testScorePairs.add( new KeyValuePair<>( comparedUser, testScores.get( comparedUser ) ) );
             }
-            //System.out.println( user + ": " + testScores.get( user ) );
         }
         return testScorePairs;
-
     }
 
+    /**
+     * Gets a list of songs based on score of other users, with most relevant songs at the beginning
+     * @param user
+     * @param fieldName - TITLE, ARTIST, ALBUM, GENRE
+     * @param method - Euclidian, PEARSON, JACCARD
+     * @param filterThreshold
+     * @return
+     */
     ArrayList < String > songReccomendations (String user, String fieldName, String method, double filterThreshold) {
-        ArrayList < KeyValuePair< String, Double > > names = similarPeople(user, fieldName, method, filterThreshold);
-        ArrayList < String > songs = new ArrayList<>();
+        ArrayList < KeyValuePair< String, Double > > names = similarPeople( user, fieldName, method, filterThreshold );
+        ArrayList < String > songs = new ArrayList<>( );
 
         names.sort( (a, b) -> { return -1 * a.getValue( ).compareTo( b.getValue( ) ); } );
         
-        //iterate throug the people on the list
+        //iterate through the people on the list
         for ( KeyValuePair< String, Double > namePair : names ) {
             
             //iterate through the songs of individuals
 
-            for (int j = 0 ; j < getUserTrackMap().get(namePair.getKey( )).size(); j++ ) {
+            for (int j = 0 ; j < getUserTrackMap( ).get( namePair.getKey( ) ).size( ); j++ ) {
 
 
                 //Add the song of the person who's name is on the list
-                songs.add(getUserTrackMap().get(namePair.getKey( )).get(j).getTitle());
+                songs.add( getUserTrackMap( ).get( namePair.getKey( ) ).get( j ).getTitle( ) );
             }
         }
         
         return songs;
-
     }
+
     public static void main(String[] args) {
         FinalProgramP4 program = new FinalProgramP4( );
-        //Euclidean or PEARSON
         HashMap< String, Double > lucaScores = program.calculateAllSimilarity( "LUCA", "GENRE", "JACCARD" );
         for (String user : program.getUsers( ) ) {
             System.out.println(user + ": " + lucaScores.get(user));
